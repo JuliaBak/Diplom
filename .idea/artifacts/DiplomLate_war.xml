@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DiplomLate:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>DiplomLate</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="DiplomLate-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="DiplomLate:war exploded" />
+    </root>
+  </artifact>
+</component>

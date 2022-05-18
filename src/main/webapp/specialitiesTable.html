@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specialities Menu</title>
+    <!-- CSS для форматирования HTML-->
+    <link rel="stylesheet" type="text/css" href="mainDesign.css">
+</head>
+<body>
+<h1>Направления ПГУТИ</h1>
+<p>Представленные направления:</p>
+<!-- Создаем таблицу -->
+<table border="1px" id="table">
+    <head id="head"> <td class="top">Направление</td> <td class="top">Номер</td> <td class="top"></td> </head>
+    <!-- <a href="https://abitur.psuti.ru/napravleniya-podgotovki/profili/Matematicheskoe%20i%20programmnoe%20obespechenie%20intellektualnykh%20sistem/"> -->
+    <!-- Создадим несколько начальных элементов -->
+    <tr> <td>Математическое обеспечение и администрирование информационных систем</td> <td>02.03.03 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Информатика и вычислительная техника</td> <td>09.03.01 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Информационные системы и технологии</td> <td>09.03.02 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Прикладная информатика</td> <td>09.03.03 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Программная инженерия</td> <td>09.03.04 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Информационная безопасность</td> <td>10.03.01 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Радиотехника</td> <td>11.03.01 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Инфокоммуникационные технологии и системы связи</td> <td>11.03.02 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Фотоника и оптоинформатика</td> <td>12.03.03 </td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Управление в технических системах</td> <td>27.03.04</td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Инноватика</td> <td>27.03.05</td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Бизнес-информатика</td> <td>38.03.05</td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+    <tr> <td>Реклама и связи с общественностью</td> <td>42.03.01</td> <td><input type="checkbox" class="boxes" name="check"></td> </tr>
+</table>
+<br/>
+
+<!-- Создаем форму -->
+<form name="mainform">
+    Направление:
+    <input type="text" name="mname"/><br/>
+    Номер:
+    <input type="text" name="price"/><br/>
+    <br/> 
+    <input type="submit" name="addition" value="Add"
+           onClick="appendToTable(document.mainform.price.value, document.mainform.mname.value); return false;"/>
+    <!-- add button-->
+    <input type="button" name="delete" value="Delete"
+           onClick="deleteRows()"/> <!-- delete button-->
+</form>
+
+<!-- javascript-->
+<script type="text/javascript"> <!--  Указание языка В явном виде -->
+<!-- Функция добавления в таблицу нового блюда -->
+       var table = document.getElementById("table");
+
+      function appendToTable(price, mname, check) {
+        var row = document.createElement("tr");
+        var mealName = document.createElement("td");
+        var priceOfMeal = document.createElement("td");
+        var checkBox = document.createElement("td");
+        mealName.innerHTML = mname;
+        priceOfMeal.innerHTML = price;
+        checkBox.innerHTML =  '<input type="checkbox" class="boxes" name="check"/>';
+        <!-- формируем в строку и записывем в таблицу -->
+        row.appendChild(mealName);
+        row.appendChild(priceOfMeal);
+        row.appendChild(checkBox);
+        table.appendChild(row);
+      }
+
+        <!-- функция удаления строк в таблице -->
+      function  deleteRows() {
+        var inputs = table.getElementsByTagName("input");
+        var i = inputs.length;
+        while (i--) {
+            var input = inputs[i];
+             <!-- если блюдо отмечено - удаляем строку -->
+            if (input.checked == true) {
+                var tr = input.parentNode.parentNode;
+                table.deleteRow(tr.rowIndex);
+            }
+        }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+html{
+    background: ghostwhite;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+p{
+    color: black;
+}
+.top {  /* выбираем группу top */
+    background: white;
+}
+table {
+    width: 80%;
+    background: white;
+}
+.paddingBtm {
+    padding-bottom: 12px;
+}
+
