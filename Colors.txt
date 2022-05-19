@@ -1,0 +1,37 @@
+#ACF7FF - light-blue
+#67C2FF - bright-blue
+#E6B248 - orange
+#57ceff - another blue
+
+Useful Code for notifications
+
+//<script scr="https://kit.fontawesome.com/a076d05399.js></script>
+
+
+<div class="alert hide">
+    <button>Уведомление</button>
+    <span class="fa-exclamation-circle"></span>
+    <span class="msg">Проверка уведомлений</span>
+    <span class="close-btn">
+        <span class="fa-times"></span>
+    </span>
+</div>
+
+
+<script>
+    $('button').click(function ()
+    {$('.alert').removeClass("hide");
+        $('.alert').addClass("show");
+        $('.alert').addClass("showAlert");
+        setTimeout(function ()
+        {     $('.alert').addClass("hide");
+            $('.alert').removeClass("show");
+        }, 5000); //hide alert automatically after 5 sec
+    });
+    $('.close-btn').click(function ()
+    {
+        $('.alert').addClass("hide");
+        $('.alert').removeClass("show");
+    });
+</script>
+

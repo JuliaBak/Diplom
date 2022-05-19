@@ -1,21 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: эльдо
-  Date: 17.05.2022
-  Time: 21:44
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
 <head>
-    <title>Specialities</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-
 <div class="wrapper">
     <nav>
         <input type="checkbox" id="show-search">
@@ -43,6 +36,16 @@
                     <ul>
                         <li><a href="#">Тест 1</a></li>
                         <li><a href="#">Тест 2</a></li>
+                        <!-- <li>
+                             <a href="#" class="desktop-link">Далее</a>
+                             <input type="checkbox" id="show-items">
+                             <label for="show-items">Далее</label>
+                             <ul>
+                                 <li><a href="#">Тест 1</a></li>
+                                 <li><a href="#">тест 2</a></li>
+                                 <li><a href="#">Тест 3</a></li>
+                             </ul>
+                         </li>-->
                     </ul>
                 </li>
                 <li><a href="#">Обратная связь/Мессенджер</a></li>
@@ -57,10 +60,9 @@
 </div>
 
 <div class="main-text">
-    <h2>Здесь будут направления подготовки в виде карточек.</h2>
-    <h3>Специальность 1</h3>
-    <br>
-    <h3>Специальность 2</h3>
+    <h2>Дипломный проект.</h2>
+    <h2>Представление специальностей</h2>
 </div>
+
 </body>
 </html>

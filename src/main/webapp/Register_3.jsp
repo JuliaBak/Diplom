@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Guru Login Form</title>
+    <link rel="stylesheet" href="mainDesign.css">
 </head>
 <body>
 <form action="user_login_success" method="post">
@@ -11,14 +12,14 @@
 
         <tr>
             <td>Имя</td>
-            <td><input type="text" name="username" /></td>
+            <td><input type="text" class="text-input-type" name="username" /></td>
         </tr>
         <tr>
             <td>Пароль</td>
-            <td><input type="password" name="password" /></td>
+            <td><input type="password" class="text-input-type" name="password" /></td>
         </tr>
     </table>
 
-    <input type="submit" value="Войти" /></form>
+    <input type="submit"  value="Войти" /></form>
 </body>
 </html>

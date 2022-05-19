@@ -35,10 +35,10 @@ public class AddServlet extends HttpServlet {
 
                 request.setAttribute("userName", name);
                 request.setAttribute("password", password);
-              //  doGet(request, response);
+                doGet(request, response);
 
-                RequestDispatcher req = request.getRequestDispatcher("index.jsp");
-                req.forward(request, response);
+               // RequestDispatcher req = request.getRequestDispatcher("index.jsp");
+              //  req.forward(request, response);
             }
 
 

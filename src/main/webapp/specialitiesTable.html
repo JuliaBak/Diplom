@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Specialities Menu</title>
+    <title>Specialities Table</title>
     <!-- CSS для форматирования HTML-->
     <link rel="stylesheet" type="text/css" href="mainDesign.css">
 </head>
@@ -33,9 +33,9 @@
 <!-- Создаем форму -->
 <form name="mainform">
     Направление:
-    <input type="text" name="mname"/><br/>
+    <input type="text" class="text-input-type" name="mname"/><br/>
     Номер:
-    <input type="text" name="price"/><br/>
+    <input type="text" class="text-input-type" name="price"/><br/>
     <br/> 
     <input type="submit" name="addition" value="Add"
            onClick="appendToTable(document.mainform.price.value, document.mainform.mname.value); return false;"/>

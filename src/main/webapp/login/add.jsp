@@ -49,7 +49,7 @@
 </div>--%>
 
 <div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
-    <form action="login-register" method="get">
+    <form action="start" method="get">
         <input type="submit" value="Вернуться" />
     </form>
 </div>

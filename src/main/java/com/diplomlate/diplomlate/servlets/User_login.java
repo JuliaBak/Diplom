@@ -25,8 +25,8 @@ public class User_login extends HttpServlet {
         }
         else
         {
-           /* request.setAttribute("usernameLogin", username);
-            request.setAttribute("passwordLogin", password);*/
+           request.setAttribute("usernameLogin", username);
+            request.setAttribute("passwordLogin", password);
 
             RequestDispatcher req = request.getRequestDispatcher("MainPage.jsp");
             req.forward(request, response);
