@@ -9,7 +9,6 @@ public class DB_Connection {
         Scanner scanner = new Scanner(System.in); //определим сканнер для считывания введенных данных
 
         // JDBC URL, username and password of MySQL server
-        //http://localhost/phpmyadmin/index.php?route=/database/structure&db=diplomdb
         //diplomdb@127.0.0.1
         String url = "jdbc:mysql://127.0.0.1:3306/diplomdb?useUnicode=true&serverTimezone=UTC";
         String user = "diplom";
@@ -26,7 +25,6 @@ public class DB_Connection {
         consoleInsertAsk(connection, scanner, true);
         consoleDeleteAsk(connection, scanner, true);
         StatementsDB.selectStatement(connection); //выведем  меню
-       // StatementsDB.getAveragePrice(connection); //выведем средний счет за блюдо
 
         connection.close();
         scanner.close();

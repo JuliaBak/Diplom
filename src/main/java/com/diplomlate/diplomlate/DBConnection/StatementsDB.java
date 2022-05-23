@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class StatementsDB {
 
-    static String username;
-    static int userpassword, mealID;
+    static String username, userpassword;
+    static int mealID;
 
 
     public static void selectStatement(Connection connection) throws SQLException {
@@ -22,7 +22,7 @@ public class StatementsDB {
             {
                 System.out.print(resultSelect.getInt("user_id") +" ");
                 System.out.print(resultSelect.getString( "user_name") +" "); //выводим название блюда
-                System.out.print(resultSelect.getInt("user_password") +" \n"); //выводим цену блюда
+                System.out.print(resultSelect.getString("user_password") +" \n"); //выводим цену блюда
             }
         }
         catch (NullPointerException exert)
@@ -41,11 +41,11 @@ public class StatementsDB {
        // System.out.println("Enter user's id:");
        // mealID = scanner.nextInt();
 
-        System.out.println("Please enter meal's name:"); //считываем введенное название блюда
+        System.out.println("Please enter user's name:"); //считываем введенное название блюда
         username = scanner.next();
 
-        System.out.println("Enter meal's password:"); //считываем введенное цену блюда
-        userpassword = scanner.nextInt();
+        System.out.println("Enter user's password:"); //считываем введенное цену блюда
+        userpassword = scanner.next();
 
         // выполняем запрос на введение данных
         insertUser = "INSERT INTO diplomdb.users (user_name, user_password) VALUES ('" + username + "', '" + userpassword +"');";
