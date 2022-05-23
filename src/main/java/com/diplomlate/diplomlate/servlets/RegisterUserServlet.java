@@ -1,6 +1,6 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.DBWork.RegisterDao;
+import com.diplomlate.diplomlate.dao.RegisterDao;
 import com.diplomlate.diplomlate.entities.User;
 import com.diplomlate.diplomlate.model.Model;
 

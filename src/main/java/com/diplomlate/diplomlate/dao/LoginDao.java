@@ -1,5 +1,6 @@
-package com.diplomlate.diplomlate.DBWork;
+package com.diplomlate.diplomlate.dao;
 
+import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.User;
 
 import java.sql.Connection;

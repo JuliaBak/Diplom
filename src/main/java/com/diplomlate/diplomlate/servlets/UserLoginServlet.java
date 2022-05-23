@@ -1,6 +1,6 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.DBWork.LoginDao;
+import com.diplomlate.diplomlate.dao.LoginDao;
 import com.diplomlate.diplomlate.entities.User;
 
 import javax.servlet.*;
