@@ -37,7 +37,7 @@ public class Speciality {
 
     public String getSpec_description()
     {
-        return spec_name;
+        return spec_description;
     }
 
     public void setSpec_description(String spec_description)
