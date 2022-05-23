@@ -2,6 +2,7 @@
 #67C2FF - bright-blue
 #E6B248 - orange
 #57ceff - another blue
+#57B3FF
 
 Useful Code for notifications
 

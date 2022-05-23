@@ -1,58 +1,117 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add new user</title>
-    <link rel="stylesheet" href="w3.css">
+    <title>Register New User</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
 </head>
 
-<body class="w3-light-grey">
-<div class="w3-container w3-blue-grey w3-opacity w3-right-align">
+<body>
+<div>
     <h1>Диплом</h1>
 </div>
 
-<div class="w3-container w3-padding">
+<%--<script>
+    $(document).ready(function() {
+        $(".button").click(function(){
+            ver=true;
+            username=$("#name").val();
+            var p=/^[a-zа-яА-ЯёЁ0-9_\.\-]{3,35}$/i;
+            if(!p.test(username)){
+                message_a="Неверное имя пользователя";
+                ver=false;
+
+            }
+            email=$("#email").val();
+            var p=/^[a-z0-9_\.\-]+@([a-z0-9\-]+\.)+[a-z]{2,4}$/i;
+            if(!p.test(email)){
+                message_a="Неверно введена почта!";
+                ver=false;
+            }
+
+            password=$("#pass").val();
+            var p=/^[a-z0-9_\.\-]{4,100}$/i;
+            if(!p.test(password)){
+                message_a="Неверный формат пароля!";
+                ver=false;
+            }
+            if(ver){
+                return true;
+            }else{
+                alert(message_a);
+                return false;
+            }
+        });
+    });
+
+</script>--%>
+
+
+<div class="options">
     <%
-        if (request.getAttribute("userName") != null && request.getAttribute("password")  != null) {
-            out.println("<div class=\"w3-panel w3-green w3-display-container w3-card-4 w3-round\">\n" +
+        if (request.getAttribute("userName") != null && request.getAttribute("password")  != null && request.getAttribute("password")  != ""
+                && request.getAttribute("username")  != "") {
+            out.println("<div>\n" +
                     "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
-                    "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-green w3-border w3-border-green w3-hover-border-grey\">×</span>\n" +
-                    "   <h5>Пользователь '" + request.getAttribute("userName") + "' добавлен!</h5>\n" +
+                    "  >×</span>\n" +
+                    "   <h2>Пользователь '" + request.getAttribute("userName") + "' добавлен!</h2>\n" +
                     "</div>");
         }
-      /*  else {
-            out.println("<div class=\"w3-panel w3-green w3-display-container w3-card-4 w3-round\">\n" +
+       /* else {
+            out.println("<div>\n" +
                     "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
-                    "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-green w3-border w3-border-green w3-hover-border-grey\">×</span>\n" +
-                    "   <h5>Заполните поля!</h5>\n" +
+                    "   >×</span>\n" +
+                    "   <h2>Заполните поля!</h2>\n" +
                     "</div>");
         }*/
     %>
-    <div class="w3-card-4">
-        <div class="w3-container w3-center w3-green">
+    <div>
+        <span id="result"></span>
+    </div>
+    <div>
+        <div>
             <h2>Добавить пользователя</h2>
         </div>
-
-        <form method="post" class="w3-selection w3-light-grey w3-padding">
+        <form method="post">
             <label>Имя:
-                <input type="text" name="name" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+                <input type="text" name="name" id="username"><br />
             </label>
             <label>Пароль:
-                <input type="password" name="pass" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+                <input type="password" name="pass" id="password"><br />
             </label>
-            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Подтвердить</button>
+            <label>Почта:
+                <input type="text" name="email" id="email"><br />
+            </label>
+            <button type="submit" class="button">Подтвердить</button>
         </form>
     </div>
 </div>
 
-<%--<div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
-    <button class="w3-btn w3-round-large" onclick="location.href='/'">Вернуться</button>
-</div>--%>
-
-<div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
+<div>
     <form action="start" method="get">
         <input type="submit" value="Вернуться" />
     </form>
 </div>
+
+<script>
+$(document).ready(function ()
+{
+    $('#username').change(function ()
+    { var username = $('#username').val();
+        $.ajax(
+            {
+                type:'POST',
+                data: {username:username},
+                url:'username-validation',
+                success: function (result){
+                    $('#result').html(result);
+                    }
+            }
+        )
+    });
+
+});
+</script>
 
 </body>
 </html>

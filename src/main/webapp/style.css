@@ -314,7 +314,6 @@ nav .content .links{
     width: 100%;
 }
 
-
 .cards{
     max-width: 1100px;
     margin: 0 auto;
@@ -406,3 +405,4 @@ nav .content .links{
         flex-direction: column;
     }
 }
+

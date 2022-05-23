@@ -49,6 +49,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Обратная связь/Мессенджер</a></li>
+                <li><a href="${pageContext.request.contextPath}/start">Выйти</a></li>
             </ul>
         </div>
         <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>

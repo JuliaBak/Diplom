@@ -4,6 +4,8 @@ public class User {
     private String name;
     private String password;
 
+    private String email;
+
     //TODO: если захотим добавить новые поля для регистрации
     private String firstName;
     private String lastName;
@@ -11,9 +13,12 @@ public class User {
     public User() {
     }
 
-    public User(String name, String password) {
+    public User(String name, String password, String email) {
         this.name = name;
         this.password = password;
+        if(!email.isEmpty()) {
+            this.email = email;
+        }
     }
 
     public String getName() {
@@ -32,7 +37,15 @@ public class User {
         this.password = password;
     }
 
-    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+   /* @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
@@ -57,5 +70,5 @@ public class User {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
-    }
+    }*/
 }

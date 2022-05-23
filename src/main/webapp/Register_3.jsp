@@ -4,22 +4,21 @@
 <html>
 <head>
     <title>Guru Login Form</title>
-    <link rel="stylesheet" href="mainDesign.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <form action="user_login_success" method="post">
-    <table style="with: 50%">
-
+    <h1>Логин</h1>
+    <table>
         <tr>
             <td>Имя</td>
-            <td><input type="text" class="text-input-type" name="username" /></td>
+            <td><input type="text" name="username" /></td>
         </tr>
         <tr>
             <td>Пароль</td>
-            <td><input type="password" class="text-input-type" name="password" /></td>
+            <td><input type="password" name="password" /></td>
         </tr>
     </table>
-
     <input type="submit"  value="Войти" /></form>
 </body>
 </html>
