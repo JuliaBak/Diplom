@@ -1,14 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: эльдо
-  Date: 19.05.2022
-  Time: 19:08
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.diplomlate.diplomlate.dao.StudyAreasTasks" %>
+<%@ page import="com.diplomlate.diplomlate.entities.StudyArea" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Cards Specialities</title>
+    <title>Study Areas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +25,7 @@
                     <input type="checkbox" id="show-features">
                     <label for="show-features">Специальности</label>
                     <ul>
-                       <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
+                        <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
                         <li><a href="ShowSpecialitiesServlet">Направления</a></li>
                         <li><a href="CardsSpecialities.jsp">Карточное представление</a></li>
                     </ul>
@@ -58,39 +53,21 @@
 
 <div class="cards">
     <h2 class="header">
-        Карточное представление
+       Направления подготовки
     </h2>
     <div class="specialities">
-        <div class="cardsContent card-1">
-            <div class="fab"></div>
-            <h2>
-                Специальность 1
-            </h2>
-            <p>
-                Описание первой специальности
-            </p>
-            <a href="#">Узнать больше</a>
-        </div>
-        <div class="cardsContent card-2">
-            <div class="fab"></div>
-            <h2>
-                Специальность 2
-            </h2>
-            <p>
-                Описание второй специальности
-            </p>
-            <a href="#">Узнать больше</a>
-        </div>
-        <div class="cardsContent card-3">
-            <div class="fab"></div>
-            <h2>
-                Специальность 3
-            </h2>
-            <p>
-                Описание третьей специальности
-            </p>
-            <a href="#">Узнать больше</a>
-        </div>
+        <%
+            for(StudyArea studyArea: StudyAreasTasks.study_areas)
+            {
+                out.print(" <div class=\"cardsContent card-3\">");
+                out.print(" <div class=\"fab\"></div>");
+                out.print("<h2>" + studyArea.getSa_name() + "</h2>");
+                out.print("<p>" + studyArea.getSa_description() + "</p>");
+                out.print("<a href=\"#\">Узнать больше</a>");
+                out.print("</div>");
+
+            }
+        %>
     </div>
 </div>
 </body>

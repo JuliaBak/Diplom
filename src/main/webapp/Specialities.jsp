@@ -27,7 +27,7 @@
                     <input type="checkbox" id="show-features">
                     <label for="show-features">Специальности</label>
                     <ul>
-                        <li><a href="specialitiesTable.html">Таблица специальностей</a></li>
+                       <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
                         <li><a href="ShowSpecialitiesServlet">Направления</a></li>
                         <li><a href="CardsSpecialities.jsp">Карточное представление</a></li>
                     </ul>
@@ -55,24 +55,20 @@
 
 <div>
 <br>
-<table border="3">
+    <div class="table-container" >
     <%
-        out.print("<div class=\"main-text\"><center><h2>Специальности:</h2></center>");
+        out.print("<div class=\"main-text\"><center><h2>Специальности:</h2></center></div>");
+        out.print("<div><table>");
         for(Speciality spec: SpecialitiesTasks.specialities)
         {
-
-            out.print("<table width=25% border=1>");
-
             out.print("<tr><td>" + spec.getSpec_name() + "</td>");
-
             out.print("<td>" + spec.getSpec_number() + "</td>");
-
             out.print("<td>" + spec.getSpec_description() + "</td></tr>");
 
-            out.println("</table></div>");
         }
+        out.println("</table></div>");
     %>
-</table>
+</div>
 </div>
 </body>
 </html>
