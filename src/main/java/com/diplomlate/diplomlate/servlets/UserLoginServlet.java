@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "UserLoginServlet", value = "/user_login_success")
 public class UserLoginServlet extends HttpServlet {
@@ -30,8 +31,14 @@ public class UserLoginServlet extends HttpServlet {
 
         if(!dao.validateUser(user) || username.isEmpty() || password.isEmpty())
         {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = response.getWriter();
+            //TODO: класс notifications - должен представлять различные уведомления. Надо сделать
+            out.println("<span class=\"notifications\">Неверно введены данные!</span>");
+
             RequestDispatcher req = request.getRequestDispatcher("Register_3.jsp");
-            req.forward(request, response);
+            req.include(request, response);
+
         }
         else
         {

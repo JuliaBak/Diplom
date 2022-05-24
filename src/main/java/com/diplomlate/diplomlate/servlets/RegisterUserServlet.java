@@ -34,7 +34,8 @@ public class RegisterUserServlet extends HttpServlet {
 
                 response.setContentType("text/html; charset=utf-8");
                 PrintWriter out = response.getWriter();
-                out.println("<span class=\"notification-alert\">Пустые поля</span>");
+                //TODO: класс notifications - должен представлять различные уведомления. Надо сделать
+                out.println("<span class=\"notifications\">Пустые поля</span>");
 
                 RequestDispatcher req = request.getRequestDispatcher("login/add.jsp");
                 req.include(request, response);
