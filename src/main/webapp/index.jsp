@@ -26,12 +26,9 @@
     </form>
     <form class="forms" action="user_login_success" method="get">
         <input type="submit" value="Логин" />
-    </form>
+    </form><%--
     <form class="forms" action="Main.jsp" method="get">
         <input type="submit" value="Меню" />
-    </form>
-  <%--  <form class="forms" action="SpecialitiesPresent.jsp" method="get">
-        <input type="submit" value="Специализации" />
     </form>--%>
     <form class="forms" action="ShowSpecialitiesServlet" method="get">
         <input type="submit" value="Специализации" />

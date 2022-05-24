@@ -28,7 +28,7 @@ public class UserLoginServlet extends HttpServlet {
         user.setName(username);
         user.setPassword(password);
 
-        if(dao.validateUser(user) && username.isEmpty() || password.isEmpty())
+        if(!dao.validateUser(user) || username.isEmpty() || password.isEmpty())
         {
             RequestDispatcher req = request.getRequestDispatcher("Register_3.jsp");
             req.forward(request, response);

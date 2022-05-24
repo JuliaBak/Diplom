@@ -19,6 +19,20 @@
             <td><input type="password" name="password" /></td>
         </tr>
     </table>
-    <input type="submit"  value="Войти" /></form>
+    <input type="submit" id="loginButton" value="Войти" /></form>
+
+<%--<script type="text/javascript">
+    $(function(){
+        $("loginButton").onclick(function(){
+            if($("#password").val==""){
+                alert("Пароль не может быть пустым");
+            }else if($("#username").val==""){
+                alert("Имя не может быть пустым");
+            }else{
+                return true;
+            }
+        });
+    });
+</script>--%>
 </body>
 </html>

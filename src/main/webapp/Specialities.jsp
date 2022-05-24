@@ -1,10 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: эльдо
-  Date: 17.05.2022
-  Time: 21:44
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.diplomlate.diplomlate.dao.SpecialitiesTasks" %>
+<%@ page import="com.diplomlate.diplomlate.entities.Speciality" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -32,7 +28,7 @@
                     <label for="show-features">Специальности</label>
                     <ul>
                         <li><a href="specialitiesTable.html">Таблица специальностей</a></li>
-                        <li><a href="Specialities.jsp">Направления (в карточках)</a></li>
+                        <li><a href="ShowSpecialitiesServlet">Направления</a></li>
                         <li><a href="CardsSpecialities.jsp">Карточное представление</a></li>
                     </ul>
                 </li>
@@ -56,11 +52,26 @@
     </nav>
 </div>
 
-<div class="main-text">
-    <h2>Здесь будут направления подготовки в виде карточек.</h2>
-    <h3>Специальность 1</h3>
-    <br>
-    <h3>Специальность 2</h3>
+<div>
+<br>
+<table border="3">
+    <%
+        out.print("<div class=\"main-text\"><center><h2>Специальности:</h2></center>");
+        for(Speciality spec: SpecialitiesTasks.specialities)
+        {
+
+            out.print("<table width=25% border=1>");
+
+            out.print("<tr><td>" + spec.getSpec_name() + "</td>");
+
+            out.print("<td>" + spec.getSpec_number() + "</td>");
+
+            out.print("<td>" + spec.getSpec_description() + "</td></tr>");
+
+            out.println("</table></div>");
+        }
+    %>
+</table>
 </div>
 </body>
 </html>

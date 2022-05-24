@@ -260,6 +260,7 @@ nav .content .links{
     text-align: center;
     transform: translate(-50%, -50%);
 }
+
 .main-text h2{
     font-size: 45px;
     margin: 5px 0;
@@ -298,21 +299,28 @@ nav .content .links{
     width: 20%;
     margin: 5px 0;
     padding: 12px 20px;
-    background: #171c24;
+    background: black;
     color: white;
     font-size: 18px;
 }
 
 .options .forms input[type=text] {
-    -webkit-transition: width 0.4s ease-in-out;
+    /*-webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    color: white;
-    background: #171c24;
-}
+    color: black;
+    background: white;*/
 
+    width: 20%;
+    margin: 5px 0;
+    padding: 12px 20px;
+    background: black;
+    color: white;
+    font-size: 18px;
+}
+/*
 .options .forms input[type=text]:focus {
     width: 100%;
-}
+}*/
 
 .cards{
     max-width: 1100px;
@@ -355,25 +363,25 @@ nav .content .links{
     background: white;
 }
 .card-1:hover{
-    border-color: #57ceff;
-    background: #57ceff;
+    border-color: #57B3FF;
+    background: #57B3FF;
 }
 .card-1:hover a{
-    color: #57ceff;
+    color: #57B3FF;
 }
 .card-2:hover{
-    border-color: #57ceff;
-    background: #57ceff;
+    border-color: #57B3FF;
+    background: #57B3FF;
 }
 .card-2:hover a{
-    color: #57ceff;
+    color: #57B3FF;
 }
 .card-3:hover{
-    border-color: #57ceff;
-    background: #57ceff;
+    border-color: #57B3FF;
+    background: #57B3FF;
 }
 .card-3:hover a{
-    color: #57ceff;
+    color: #57B3FF;
 }
 .cardsContent h2{
     font-size: 30px;

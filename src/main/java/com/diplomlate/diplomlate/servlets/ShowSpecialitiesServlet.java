@@ -36,7 +36,7 @@ public class ShowSpecialitiesServlet extends HttpServlet {
 
             request.setAttribute("specialities",SpecialitiesTasks.specialities);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("newSpecialities.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Specialities.jsp");
             dispatcher.forward(request, response);
         }
         else {

@@ -2,15 +2,22 @@
 <html>
 <head>
     <title>Register New User</title>
-    <link rel="stylesheet" href="../style.css">
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+   <%-- <link rel="stylesheet" href="style.css">--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
-<div>
-    <h1>Диплом</h1>
-</div>
-
+<%--<div class="wrapper">
+    <nav>
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+            <div class="logo"><a>Диплом</a></div>
+        </div>
+    </nav>
+</div>--%>
 <%--<script>
     $(document).ready(function() {
         $(".button").click(function(){
@@ -57,13 +64,6 @@
                     "   <h2>Пользователь '" + request.getAttribute("userName") + "' добавлен!</h2>\n" +
                     "</div>");
         }
-       /* else {
-            out.println("<div>\n" +
-                    "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
-                    "   >×</span>\n" +
-                    "   <h2>Заполните поля!</h2>\n" +
-                    "</div>");
-        }*/
     %>
     <div>
         <span id="result"></span>
@@ -72,17 +72,17 @@
         <div>
             <h2>Добавить пользователя</h2>
         </div>
-        <form method="post">
+        <form class="forms" method="post">
             <label>Имя:
                 <input type="text" name="name" id="username"><br />
             </label>
             <label>Пароль:
-                <input type="password" name="pass" id="password"><br />
+                <input type="password" name="pass" id="password" ><br />
             </label>
             <label>Почта:
-                <input type="text" name="email" id="email"><br />
+                <input type="email" name="email" id="email" placeholder="youremail@gmail.com"><br />
             </label>
-            <button type="submit" class="button">Подтвердить</button>
+            <button type="submit" class="forms-buttons">Подтвердить</button>
         </form>
     </div>
 </div>
@@ -109,7 +109,6 @@ $(document).ready(function ()
             }
         )
     });
-
 });
 </script>
 

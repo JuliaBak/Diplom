@@ -7,12 +7,12 @@
 </head>
 <body>
 
-<h1>Специализации</h1>
+<%--<h1>Специальности</h1>--%>
 
 <br>
 <table border="3">
     <%
-        out.print("<div><center><h1>Result:</h1></center>");
+        out.print("<div><center><h1>Специальности:</h1></center>");
         for(Speciality spec: SpecialitiesTasks.specialities)
         {
 
