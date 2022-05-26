@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="mainDesign.css">
 </head>
 
+
+
 <a href="specialities-look">Специальности</a>
 </br>
 <a href="specialitiesTable.html">Направления</a>

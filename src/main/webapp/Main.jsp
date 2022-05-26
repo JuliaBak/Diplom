@@ -48,7 +48,7 @@
                          </li>-->
                     </ul>
                 </li>
-                <li><a href="#">Обратная связь/Мессенджер</a></li>
+                <li><a href="Chat.html">Обратная связь/Мессенджер</a></li>
                 <li><a href="${pageContext.request.contextPath}/start">Выйти</a></li>
             </ul>
         </div>
