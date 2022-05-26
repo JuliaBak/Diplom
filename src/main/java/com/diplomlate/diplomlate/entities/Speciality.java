@@ -5,14 +5,17 @@ public class Speciality {
     private String spec_number;
     private String spec_description;
 
+    private int spec_sa_id;
+
     public Speciality() {
     }
 
-    public Speciality(String spec_name, String spec_number, String spec_description)
+    public Speciality(String spec_name, String spec_number, String spec_description, int spec_sa_id)
     {
         this.spec_name = spec_name;
         this.spec_number = spec_number;
         this.spec_description = spec_description;
+        this.spec_sa_id = spec_sa_id;
     }
 
     public String getSpec_name()
@@ -43,6 +46,16 @@ public class Speciality {
     public void setSpec_description(String spec_description)
     {
         this.spec_description = spec_description;
+    }
+
+    public int getSpec_sa_id()
+    {
+        return  spec_sa_id;
+    }
+
+    public  void setSpec_sa_id(int spec_sa_id)
+    {
+        this.spec_sa_id = spec_sa_id;
     }
 
 }

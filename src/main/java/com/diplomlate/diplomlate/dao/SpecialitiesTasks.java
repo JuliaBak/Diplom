@@ -28,6 +28,7 @@ public class SpecialitiesTasks {
                 speciality.setSpec_name(rs.getString("spec_name"));
                 speciality.setSpec_number(rs.getString("spec_number"));
                 speciality.setSpec_description(rs.getString("spec_description"));
+                speciality.setSpec_sa_id(rs.getInt("spec_sa_id"));
                 specialities.add(speciality);
                 i++;
             }
