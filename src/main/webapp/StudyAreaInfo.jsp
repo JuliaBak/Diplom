@@ -26,8 +26,8 @@
                     <label for="show-features">Специальности</label>
                     <ul>
                         <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
-                        <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
-                        <li><a href="ShowSpecialitiesServlet">Специализации</a></li>
+                            <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
+                            <li><a href="ShowSpecialitiesServlet">Специальности</a></li>
                     </ul>
                 </li>
                 <li>
@@ -51,6 +51,14 @@
     </nav>
 </div>
 
+
+<div class="main-text">
+   <%
+       out.print(" <h3>" + StudyAreasTasks.searchedSA.getSa_description() + "</h3>" );
+       System.out.println(StudyAreasTasks.searchedSA.getSa_description());
+   %>
+</div>
+
 <div class="box-container">
     <div class="box-wrap">
         <div class="cards">
@@ -66,7 +74,8 @@
                         out.print(" <div class=\"fab\"></div>");
                         out.print("<h2>" + speciality.getSpec_name() + "</h2>");
                         out.print("<p>" + speciality.getSpec_description() + "</p>");
-                        out.print("<a href=\"#\">Узнать больше</a>");
+                        out.print("<a href=\"spec-info"+"?"+speciality.getSpec_number()+"\">Узнать больше</a>");
+                       /* out.print("<a href=\"#\">Узнать больше</a>");*/
                         out.print("</div>");
 
                     }

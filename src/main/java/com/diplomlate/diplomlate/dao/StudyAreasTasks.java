@@ -16,6 +16,8 @@ public class StudyAreasTasks {
     public static List<StudyArea> study_areas = new ArrayList<>();
     public static List<Speciality> sa_specialities = new ArrayList<>();
 
+    public static StudyArea searchedSA  = new StudyArea();
+
     public String ShowAllStudyAreas() {
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * FROM study_areas ";
@@ -78,6 +80,16 @@ public class StudyAreasTasks {
         } else {
             return "Error!!";
         }
+    }
+
+    public StudyArea FindSAinList(String id)
+    {
+        for (StudyArea SA : study_areas) {
+            if (SA.getSa_id() == Integer.parseInt(id)) {
+               return searchedSA = SA;
+            }
+        }
+        return null;
     }
 
 }

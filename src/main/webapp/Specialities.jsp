@@ -29,7 +29,7 @@
                     <ul>
                        <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
                            <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
-                           <li><a href="ShowSpecialitiesServlet">Специализации</a></li>
+                           <li><a href="ShowSpecialitiesServlet">Специальности</a></li>
                     </ul>
                 </li>
                 <li>

@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page import="com.diplomlate.diplomlate.dao.StudyAreasTasks" %>
+<%@ page import="com.diplomlate.diplomlate.entities.Speciality" %>
+<%@ page import="com.diplomlate.diplomlate.dao.SpecialitiesTasks" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>About</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Speciality Info</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
 <div class="wrapper">
     <nav>
         <input type="checkbox" id="show-search">
@@ -24,7 +26,7 @@
                     <input type="checkbox" id="show-features">
                     <label for="show-features">Специальности</label>
                     <ul>
-                       <!-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>-->
+                        <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
                         <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
                         <li><a href="ShowSpecialitiesServlet">Специальности</a></li>
                     </ul>
@@ -39,7 +41,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Обратная связь/Мессенджер</a></li>
-                <li><a href="start">Выйти</a></li>
+                <li><a href="${pageContext.request.contextPath}/start">Выйти</a></li>
             </ul>
         </div>
         <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
@@ -51,11 +53,37 @@
 </div>
 
 <div class="main-text">
-    <h2>Дипломный проект.</h2>
-    <h3>Данные проект представляет улучшенное представление специальностей, прдедставленных Поволжским Государственным Университетом Телекоммуникаций и Информацтики.
-        Способствует визуальному представлению каждой из специальностей и подробное изучение их особенностей.
-        Представлен студентами группы РПИС-82, Бакай Ю.О. и Лариной В.А.</h3>
+    <%
+        out.print(" <h2>" + SpecialitiesTasks.searchedSpec.getSpec_name() + "</h2>" );
+    %>
 </div>
+
+<%--<div class="box-container">
+    <div class="box-wrap">
+        <div class="cards">
+            <div class="skip_element">
+                <h2 class="header">
+                    Специальности
+                </h2>
+                &lt;%&ndash;  <div class="specialities">&ndash;%&gt;
+                <%
+                    for(Speciality speciality: StudyAreasTasks.sa_specialities)
+                    {
+                        out.print(" <div class=\"cardsContent card-3\">");
+                        out.print(" <div class=\"fab\"></div>");
+                        out.print("<h2>" + speciality.getSpec_name() + "</h2>");
+                        out.print("<p>" + speciality.getSpec_description() + "</p>");
+                        out.print("<a href=\"#\">Узнать больше</a>");
+                        out.print("</div>");
+
+                    }
+                %>
+
+                &lt;%&ndash; </div>  &ndash;%&gt;
+            </div>
+        </div>
+    </div>
+</div>--%>
 
 </body>
 </html>

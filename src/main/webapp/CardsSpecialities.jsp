@@ -31,8 +31,8 @@
                     <label for="show-features">Специальности</label>
                     <ul>
                        <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
-                        <li><a href="ShowSpecialitiesServlet">Направления</a></li>
-                        <li><a href="CardsSpecialities.jsp">Карточное представление</a></li>
+                           <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
+                           <li><a href="ShowSpecialitiesServlet">Специальности</a></li>
                     </ul>
                 </li>
                 <li>

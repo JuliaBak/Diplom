@@ -22,9 +22,8 @@ public class StudyAreaInfoServlet extends HttpServlet {
 
         String id=request.getQueryString();
 
-        System.out.println(id);
-
         String result = dao.SearchSASpecialitiesBySpecID(id);
+        dao.FindSAinList(id);
 
         if (result.equals("Success")) {
             List<Speciality> allSASpec = new ArrayList<Speciality>(StudyAreasTasks.sa_specialities);

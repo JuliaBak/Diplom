@@ -17,6 +17,8 @@ public class ShowStudyAreasServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         StudyAreasTasks dao = new StudyAreasTasks();
+
+        StudyAreasTasks.study_areas.clear();
         String result = dao.ShowAllStudyAreas();
 
         if (result.equals("Success")) {

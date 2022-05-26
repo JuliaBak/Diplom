@@ -11,6 +11,8 @@ public class SpecialitiesTasks {
 
     public static List<Speciality> specialities = new ArrayList<>();
 
+    public static Speciality searchedSpec = new Speciality();
+
     public String ShowAllSpecialities() {
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * FROM specialities ";
@@ -43,5 +45,15 @@ public class SpecialitiesTasks {
         } else {
             return "Error!!!!";
         }
+    }
+
+    public Speciality FindSpecBySpecNumber(String spec_number)
+    {
+        for (Speciality spec : specialities) {
+            if ((spec.getSpec_number().equals(spec_number))) {
+                return searchedSpec = spec;
+            }
+        }
+        return null;
     }
 }
