@@ -55,6 +55,8 @@
 <div class="main-text">
     <%
         out.print(" <h2>" + SpecialitiesTasks.searchedSpec.getSpec_name() + "</h2>" );
+        out.print("<br/>");
+        out.print(" <h3>" + SpecialitiesTasks.searchedSpec.getSpec_description() + "</h3>" );
     %>
 </div>
 

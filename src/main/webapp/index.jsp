@@ -22,7 +22,7 @@
 
 <div class="options">
     <form class="forms" action="add" method="get">
-        <input type="submit" value="Зарегистрироваться (добавить пользователя)" />
+        <input type="submit" value="Зарегистрироваться" />
     </form>
     <form class="forms" action="user_login_success" method="get">
         <input type="submit" value="Логин" />
