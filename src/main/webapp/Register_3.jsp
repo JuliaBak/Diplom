@@ -27,7 +27,6 @@
 <div class="data-input-user">
     <form action="user_login_success" method="post" class="forms-user">
             <label class="labels-user">Имя</label>
-
         <div>
                 <input type="text" class="data_input" name="username" />
         </div>

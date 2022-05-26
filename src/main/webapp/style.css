@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
 }
 
 p {
@@ -375,9 +375,47 @@ nav .content .links{
     width: 100%;
 }*/
 
-.cards{
+.skip_element{
+    margin-top: calc(100% - 600px);
+}
 
+.box-container {/*
+    margin-top: 10px;*/
     width: 100%;
+    display: flex;
+    margin: 0 20px;
+
+    /*
+    height: 500px;*/
+
+}
+.box-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.cards{
+    padding: 0 20px;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+
+    width: 100%;/*
+    resize: vertical;*/
+   /* width: 100%;
 
     position: absolute;
     top: 50%;
@@ -386,9 +424,9 @@ nav .content .links{
     align-items: center;
 
     max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px;
+
+    text-align: center;*/
+    /*padding: 30px;*/
 }
 .cards h2.header{
     font-size: 40px;
@@ -453,7 +491,8 @@ nav .content .links{
 }
 .cardsContent p{
     font-size: 17px;
-    font-family: 'Poppins',sans-serif;
+    font-family: inherit;
+   /* font-family: 'Poppins',sans-serif;*/
 }
 .cardsContent a{
     margin: 22px 0;

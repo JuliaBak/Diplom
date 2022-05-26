@@ -28,8 +28,8 @@
                     <label for="show-features">Специальности</label>
                     <ul>
                        <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
-                        <li><a href="ShowSpecialitiesServlet">Направления</a></li>
-                        <li><a href="CardsSpecialities.jsp">Карточное представление</a></li>
+                           <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
+                           <li><a href="ShowSpecialitiesServlet">Специализации</a></li>
                     </ul>
                 </li>
                 <li>
@@ -55,7 +55,9 @@
 
 <div>
 <br>
-    <div class="table-container" >
+    <div class="box-container">
+        <%--<div class="skip_element">--%>
+            <div class="table-container" >
     <%
         out.print("<div class=\"main-text\"><center><h2>Специальности:</h2></center></div>");
         out.print("<div><table>");
@@ -68,7 +70,9 @@
         }
         out.println("</table></div>");
     %>
+            </div>
+    </div>
 </div>
-</div>
+
 </body>
 </html>

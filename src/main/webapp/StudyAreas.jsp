@@ -26,8 +26,8 @@
                     <label for="show-features">Специальности</label>
                     <ul>
                         <%-- <li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
-                        <li><a href="ShowSpecialitiesServlet">Направления</a></li>
-                        <li><a href="CardsSpecialities.jsp">Карточное представление</a></li>
+                            <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
+                            <li><a href="ShowSpecialitiesServlet">Специализации</a></li>
                     </ul>
                 </li>
                 <li>
@@ -51,11 +51,16 @@
     </nav>
 </div>
 
-<div class="cards">
+
+<div class="box-container">
+    <div class="box-wrap">
+        <div class="cards">
+            <div class="skip_element">
+
     <h2 class="header">
        Направления подготовки
     </h2>
-    <div class="specialities">
+  <%--  <div class="specialities">--%>
         <%
             for(StudyArea studyArea: StudyAreasTasks.study_areas)
             {
@@ -68,7 +73,12 @@
 
             }
         %>
+
+           <%-- </div>  --%>
+            </div>
+        </div>
     </div>
 </div>
+
 </body>
 </html>

@@ -26,8 +26,7 @@
                     <ul>
                         <%--<li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
                         <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
-                         <li><a href="ShowSpecialitiesServlet">Направления</a></li>
-                        <li><a href="CardsSpecialities.jsp">Карточное представление</a></li>
+                         <li><a href="ShowSpecialitiesServlet">Специализации</a></li>
                     </ul>
                 </li>
                 <li>
