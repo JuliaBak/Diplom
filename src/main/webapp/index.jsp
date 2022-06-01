@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-<br/>
 
 <div class="wrapper">
     <nav>

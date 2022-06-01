@@ -2,7 +2,6 @@ package com.diplomlate.diplomlate.dao;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.SpProfile;
-import com.diplomlate.diplomlate.entities.Speciality;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -51,7 +50,7 @@ public class SpProfilesTasks {
         }
     }
 
-    public SpProfile FindSpProfByName(int sp_prof_id)
+    public SpProfile FindSpProfById(int sp_prof_id)
     {
         for (SpProfile spProf : spProfiles) {
             if ((spProf.getSp_prof_id() == (sp_prof_id))) {

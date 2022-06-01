@@ -1,17 +1,13 @@
 package com.diplomlate.diplomlate.servlets;
 
 import com.diplomlate.diplomlate.dao.SpProfilesTasks;
-import com.diplomlate.diplomlate.dao.SpecialitiesTasks;
 import com.diplomlate.diplomlate.entities.SpProfile;
-import com.diplomlate.diplomlate.entities.Speciality;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import static com.diplomlate.diplomlate.dao.SpProfilesTasks.searchedSpProfiles;
 
 @WebServlet(name = "SpProfInfoServlet", value = "/sp_prof_info")
 public class SpProfInfoServlet extends HttpServlet {
@@ -21,7 +17,7 @@ public class SpProfInfoServlet extends HttpServlet {
         SpProfilesTasks daoSpec = new SpProfilesTasks();
 
         String searched_prof_name = (request.getQueryString());
-        SpProfile spProfile = daoSpec.FindSpProfByName(Integer.parseInt(searched_prof_name));
+        SpProfile spProfile = daoSpec.FindSpProfById(Integer.parseInt(searched_prof_name));
 
        /* String result = dao.SearchSASpecialitiesBySpecID(searched_spec_name);
         dao.FindSAinList(searched_spec_name);*/
