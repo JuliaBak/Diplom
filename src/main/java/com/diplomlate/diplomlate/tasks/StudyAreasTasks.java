@@ -19,6 +19,7 @@ public class StudyAreasTasks {
     public static StudyArea searchedSA  = new StudyArea();
 
     public String ShowAllStudyAreas() {
+        study_areas.clear();
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * FROM study_areas ";
 
@@ -49,7 +50,9 @@ public class StudyAreasTasks {
         }
     }
 
-    public String SearchSASpecialitiesBySpecID(String SA) {
+    public String SearchSASpecBySAId(String SA) {
+        sa_specialities.clear();
+        //TODO: посмотреть можно ли исправить метод
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * FROM specialities WHERE spec_sa_id=? ";
 
@@ -84,6 +87,18 @@ public class StudyAreasTasks {
         }
     }
 
+  /*  public String FindSASpecBySpecId(int spec_sa_id)
+    {
+        sa_specialities.clear();
+        for (Speciality spec : specialities) {
+            if ((spec.getSpec_sa_id() == spec_sa_id)) {
+                sa_specialities.add(spec);
+                return "Success";
+            }
+        }
+        return "Error!!";
+    }
+*/
     public StudyArea FindSAinList(String id)
     {
         for (StudyArea SA : study_areas) {

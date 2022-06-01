@@ -20,10 +20,8 @@ public class ShowStudyAreasServlet extends HttpServlet {
         StudyAreasTasks dao = new StudyAreasTasks();
 
         SpecialitiesTasks daoSpec = new SpecialitiesTasks();
-        specialities.clear();
         daoSpec.ShowAllSpecialities();
 
-        StudyAreasTasks.study_areas.clear();
         String result = dao.ShowAllStudyAreas();
 
         if (result.equals("Success")) {

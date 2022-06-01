@@ -17,11 +17,11 @@ public class StudyAreaInfoServlet extends HttpServlet {
 
         //TODO: исправить внешнее представление всех страниц
         StudyAreasTasks dao = new StudyAreasTasks();
-        StudyAreasTasks.sa_specialities.clear();
+       /* StudyAreasTasks.sa_specialities.clear();*/
 
         String id=request.getQueryString();
 
-        String result = dao.SearchSASpecialitiesBySpecID(id);
+        String result = dao.SearchSASpecBySAId(id);
         dao.FindSAinList(id);
 
         if (result.equals("Success")) {

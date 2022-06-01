@@ -7,6 +7,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.diplomlate.diplomlate.tasks.StudyAreasTasks.sa_specialities;
+
 public class SpecialitiesTasks {
 
     public static List<Speciality> specialities = new ArrayList<>();
@@ -14,6 +16,7 @@ public class SpecialitiesTasks {
     public static Speciality searchedSpec = new Speciality();
 
     public String ShowAllSpecialities() {
+        specialities.clear();
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * FROM specialities ";
 
@@ -59,4 +62,5 @@ public class SpecialitiesTasks {
         }
         return null;
     }
+
 }
