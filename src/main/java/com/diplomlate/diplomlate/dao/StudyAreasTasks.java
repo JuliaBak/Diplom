@@ -62,9 +62,11 @@ public class StudyAreasTasks {
             while (rs.next()) {
 
                 Speciality speciality = new Speciality();
+                speciality.setSpec_id(rs.getInt("spec_id"));
                 speciality.setSpec_name(rs.getString("spec_name"));
                 speciality.setSpec_description(rs.getString("spec_description"));
                 speciality.setSpec_number(rs.getString("spec_number"));
+                speciality.setSpec_sa_id(rs.getInt("spec_sa_id"));
 
                 sa_specialities.add(speciality);
                 i++;

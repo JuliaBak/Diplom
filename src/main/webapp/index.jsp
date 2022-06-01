@@ -30,9 +30,9 @@
     <form class="forms" action="Main.jsp" method="get">
         <input type="submit" value="Меню" />
     </form>--%>
-    <form class="forms" action="ShowSpecialitiesServlet" method="get">
+  <%--  <form class="forms" action="ShowSpecialitiesServlet" method="get">
         <input type="submit" value="Специализации" />
-    </form>
+    </form>--%>
 </div>
 
 

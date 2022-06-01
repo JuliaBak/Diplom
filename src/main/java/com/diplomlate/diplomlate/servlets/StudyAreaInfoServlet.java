@@ -39,6 +39,9 @@ public class StudyAreaInfoServlet extends HttpServlet {
                 String spec_description = spec.getSpec_description();
                 request.setAttribute("spec_description",spec_description);
 
+                int spec_id = spec.getSpec_id();
+                request.setAttribute("spec_id",spec_id);
+
             }
 
             request.setAttribute("sa_specialities",StudyAreasTasks.sa_specialities);

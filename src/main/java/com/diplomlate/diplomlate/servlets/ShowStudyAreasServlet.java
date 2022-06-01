@@ -12,11 +12,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.diplomlate.diplomlate.dao.SpecialitiesTasks.specialities;
+
 @WebServlet(name = "ShowStudyAreasServlet", value = "/ShowStudyAreasServlet")
 public class ShowStudyAreasServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         StudyAreasTasks dao = new StudyAreasTasks();
+
+        SpecialitiesTasks daoSpec = new SpecialitiesTasks();
+        specialities.clear();
+        daoSpec.ShowAllSpecialities();
 
         StudyAreasTasks.study_areas.clear();
         String result = dao.ShowAllStudyAreas();

@@ -7,6 +7,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.diplomlate.diplomlate.dao.StudyAreasTasks.sa_specialities;
+
 public class SpecialitiesTasks {
 
     public static List<Speciality> specialities = new ArrayList<>();
@@ -27,11 +29,14 @@ public class SpecialitiesTasks {
             while(rs.next())
             {
                 Speciality speciality = new Speciality();
+                speciality.setSpec_id(rs.getInt("spec_id"));
                 speciality.setSpec_name(rs.getString("spec_name"));
                 speciality.setSpec_number(rs.getString("spec_number"));
                 speciality.setSpec_description(rs.getString("spec_description"));
                 speciality.setSpec_sa_id(rs.getInt("spec_sa_id"));
                 specialities.add(speciality);
+
+                System.out.println(speciality.getSpec_id()+"here");
                 i++;
             }
 
@@ -47,10 +52,10 @@ public class SpecialitiesTasks {
         }
     }
 
-    public Speciality FindSpecBySpecNumber(String spec_number)
+    public Speciality FindSpecById(int spec_id)
     {
         for (Speciality spec : specialities) {
-            if ((spec.getSpec_number().equals(spec_number))) {
+            if ((spec.getSpec_id() == spec_id)) {
                 return searchedSpec = spec;
             }
         }

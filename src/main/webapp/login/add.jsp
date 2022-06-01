@@ -3,13 +3,13 @@
 <head>
     <title>Register New User</title>
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-   <%-- <link rel="stylesheet" href="style.css">--%>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
-<%--<div class="wrapper">
+<div class="wrapper">
     <nav>
         <input type="checkbox" id="show-menu">
         <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
@@ -17,7 +17,7 @@
             <div class="logo"><a>Диплом</a></div>
         </div>
     </nav>
-</div>--%>
+</div>
 <%--<script>
     $(document).ready(function() {
         $(".button").click(function(){
@@ -54,7 +54,7 @@
 </script>--%>
 
 
-<div class="options">
+<div <%--class="options"--%>>
     <%
         if (request.getAttribute("userName") != null && request.getAttribute("password")  != null && request.getAttribute("password")  != ""
                 && request.getAttribute("username")  != "") {
@@ -65,24 +65,27 @@
                     "</div>");
         }
     %>
-    <div>
-        <span id="result"></span>
+    <div class="main-text">
+        <span style="color: red; font-size: 18px" id="result"></span>
     </div>
-    <div>
+    <div class="data-input-user">
         <div>
             <h2>Добавить пользователя</h2>
         </div>
-        <form class="forms" method="post">
-            <label>Имя:
-                <input type="text" name="name" id="username"><br />
-            </label>
-            <label>Пароль:
-                <input type="password" name="pass" id="password" ><br />
-            </label>
-            <label>Почта:
-                <input type="email" name="email" id="email" placeholder="youremail@gmail.com"><br />
-            </label>
-            <button type="submit" class="forms-buttons">Подтвердить</button>
+        <form class="forms-user" method="post">
+           <%-- <label>Имя: </label>--%>
+                <div>
+                    <label for="username">Имя</label><input type="text" class="data_input" name="name" id="username"><br />
+                </div>
+          <%-- <label>Пароль:    </label>--%>
+               <div>
+                   <label for="password">Пароль</label><input type="password" class="data_input" name="pass" id="password" ><br />
+                </div>
+                <%--<label>Почта:  </label>--%>
+                    <div>
+                        <label for="email">Почта</label><input type="email" class="data_input" name="email" id="email" placeholder="youremail@gmail.com"><br />
+            </div>
+            <input type="submit" value="Подтвердить" <%--class="forms-buttons"--%>><%--Подтвердить--%></input>
         </form>
     </div>
 </div>

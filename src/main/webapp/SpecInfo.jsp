@@ -1,6 +1,8 @@
 <%@ page import="com.diplomlate.diplomlate.dao.StudyAreasTasks" %>
 <%@ page import="com.diplomlate.diplomlate.entities.Speciality" %>
 <%@ page import="com.diplomlate.diplomlate.dao.SpecialitiesTasks" %>
+<%@ page import="com.diplomlate.diplomlate.entities.SpProfile" %>
+<%@ page import="com.diplomlate.diplomlate.dao.SpProfilesTasks" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -59,6 +61,33 @@
         out.print(" <h3>" + SpecialitiesTasks.searchedSpec.getSpec_description() + "</h3>" );
     %>
 </div>
+
+
+<div class="box-container">
+    <div class="box-wrap">
+        <div class="cards">
+             <div class="skip_element">
+            <h2 class="header">
+                Профили
+            </h2>
+            <%
+                for(SpProfile spProfile: SpProfilesTasks.searchedSpProfiles)
+                {
+                    out.print(" <div class=\"cardsContent card-3\">");
+                    out.print(" <div class=\"fab\"></div>");
+                    out.print("<h2>" + spProfile.getSp_prof_name() + "</h2>");
+                    out.print("<p>" + spProfile.getSp_prof_description() + "</p>");
+                    out.print("<a href=\"sp_prof_info"+"?"+spProfile.getSp_prof_id()+"\">Узнать больше</a>");
+                    out.print("</div>");
+
+                }
+            %>
+
+             </div>
+        </div>
+    </div>
+</div>
+
 
 <%--<div class="box-container">
     <div class="box-wrap">

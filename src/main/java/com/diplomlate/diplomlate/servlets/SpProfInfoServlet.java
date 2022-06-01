@@ -2,6 +2,7 @@ package com.diplomlate.diplomlate.servlets;
 
 import com.diplomlate.diplomlate.dao.SpProfilesTasks;
 import com.diplomlate.diplomlate.dao.SpecialitiesTasks;
+import com.diplomlate.diplomlate.entities.SpProfile;
 import com.diplomlate.diplomlate.entities.Speciality;
 
 import javax.servlet.*;
@@ -11,33 +12,23 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import static com.diplomlate.diplomlate.dao.SpProfilesTasks.searchedSpProfiles;
-import static com.diplomlate.diplomlate.dao.SpProfilesTasks.spProfiles;
-import static com.diplomlate.diplomlate.dao.SpecialitiesTasks.specialities;
 
-@WebServlet(name = "SpecialityInfoServlet", value = "/spec-info")
-public class SpecialityInfoServlet extends HttpServlet {
+@WebServlet(name = "SpProfInfoServlet", value = "/sp_prof_info")
+public class SpProfInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        SpecialitiesTasks daoSpec = new SpecialitiesTasks();
+        SpProfilesTasks daoSpec = new SpProfilesTasks();
 
-        int searched_spec_number = Integer.parseInt(request.getQueryString());
-        Speciality speciality = daoSpec.FindSpecById(searched_spec_number);
-
-        SpProfilesTasks daoSpProf = new SpProfilesTasks();
-
-        spProfiles.clear();
-        daoSpProf.ShowAllSpProf();
-
-        searchedSpProfiles.clear();
-        daoSpProf.SearchProfilesBySpecID(searched_spec_number);
+        String searched_prof_name = (request.getQueryString());
+        SpProfile spProfile = daoSpec.FindSpProfByName(Integer.parseInt(searched_prof_name));
 
        /* String result = dao.SearchSASpecialitiesBySpecID(searched_spec_name);
         dao.FindSAinList(searched_spec_name);*/
 
-        if (speciality != null) {
+        if (spProfile != null) {
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("SpecInfo.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("SpProfileInfo.jsp");
             dispatcher.forward(request, response);
         }
         else {
@@ -49,7 +40,7 @@ public class SpecialityInfoServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<span class=\"notifications\">Отсутствуют необходимые данные</span>");
 
-            RequestDispatcher req = request.getRequestDispatcher("StudyAreaInfo.jsp");
+            RequestDispatcher req = request.getRequestDispatcher("SpecInfo.jsp");
             req.include(request, response);
 
         }
