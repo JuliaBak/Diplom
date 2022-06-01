@@ -1,5 +1,5 @@
 <%@ page import="com.diplomlate.diplomlate.entities.Speciality" %>
-<%@ page import="com.diplomlate.diplomlate.dao.StudyAreasTasks" %>
+<%@ page import="com.diplomlate.diplomlate.tasks.StudyAreasTasks" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

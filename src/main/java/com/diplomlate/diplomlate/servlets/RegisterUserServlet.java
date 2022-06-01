@@ -1,6 +1,6 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.dao.RegisterDao;
+import com.diplomlate.diplomlate.tasks.Register;
 import com.diplomlate.diplomlate.entities.User;
 import com.diplomlate.diplomlate.model.Model;
 
@@ -47,7 +47,7 @@ public class RegisterUserServlet extends HttpServlet {
                 Model model = Model.getInstance();
                 model.add(user);
 
-                RegisterDao dao = new RegisterDao();
+                Register dao = new Register();
                 String result = dao.RegisterInDB(user);
 
                 request.setAttribute("userName", name);

@@ -1,6 +1,6 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.dao.LoginDao;
+import com.diplomlate.diplomlate.tasks.Login;
 import com.diplomlate.diplomlate.entities.User;
 
 import javax.servlet.*;
@@ -24,7 +24,7 @@ public class UserLoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         User user = new User();
-        LoginDao dao = new LoginDao();
+        Login dao = new Login();
 
         user.setName(username);
         user.setPassword(password);

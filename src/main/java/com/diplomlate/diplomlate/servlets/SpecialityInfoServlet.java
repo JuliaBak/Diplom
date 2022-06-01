@@ -1,7 +1,7 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.dao.SpProfilesTasks;
-import com.diplomlate.diplomlate.dao.SpecialitiesTasks;
+import com.diplomlate.diplomlate.tasks.SpProfilesTasks;
+import com.diplomlate.diplomlate.tasks.SpecialitiesTasks;
 import com.diplomlate.diplomlate.entities.Speciality;
 
 import javax.servlet.*;
@@ -10,9 +10,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static com.diplomlate.diplomlate.dao.SpProfilesTasks.searchedSpProfiles;
-import static com.diplomlate.diplomlate.dao.SpProfilesTasks.spProfiles;
-import static com.diplomlate.diplomlate.dao.SpecialitiesTasks.specialities;
+import static com.diplomlate.diplomlate.tasks.SpProfilesTasks.searchedAllSpProfiles;
 
 @WebServlet(name = "SpecialityInfoServlet", value = "/spec-info")
 public class SpecialityInfoServlet extends HttpServlet {
@@ -26,11 +24,10 @@ public class SpecialityInfoServlet extends HttpServlet {
 
         SpProfilesTasks daoSpProf = new SpProfilesTasks();
 
-        spProfiles.clear();
         daoSpProf.ShowAllSpProf();
 
-        searchedSpProfiles.clear();
-        daoSpProf.SearchProfilesBySpecID(searched_spec_number);
+        daoSpProf.SearchProfilesBySpecIDInAllSp(searched_spec_number);
+       /* daoSpProf.SearchProfilesBySpecID(searched_spec_number);*/
 
        /* String result = dao.SearchSASpecialitiesBySpecID(searched_spec_name);
         dao.FindSAinList(searched_spec_name);*/

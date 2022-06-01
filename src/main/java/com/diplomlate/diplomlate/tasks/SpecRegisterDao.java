@@ -1,8 +1,7 @@
-package com.diplomlate.diplomlate.dao;
+package com.diplomlate.diplomlate.tasks;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.Speciality;
-import com.diplomlate.diplomlate.entities.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

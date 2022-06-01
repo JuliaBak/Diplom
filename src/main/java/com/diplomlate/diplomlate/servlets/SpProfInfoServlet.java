@@ -1,6 +1,6 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.dao.SpProfilesTasks;
+import com.diplomlate.diplomlate.tasks.SpProfilesTasks;
 import com.diplomlate.diplomlate.entities.SpProfile;
 
 import javax.servlet.*;
@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static com.diplomlate.diplomlate.dao.SpProfilesTasks.*;
+import static com.diplomlate.diplomlate.tasks.SpProfilesTasks.*;
 
 @WebServlet(name = "SpProfInfoServlet", value = "/sp_prof_info")
 public class SpProfInfoServlet extends HttpServlet {

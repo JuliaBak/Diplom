@@ -35,7 +35,7 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-    let firstMessage = "How's it going?"
+    let firstMessage = "Здравствуй! Мое имя Диппи"
     document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
     let time = getTime();
@@ -46,7 +46,7 @@ function firstBotMessage() {
 
 firstBotMessage();
 
-// Retrieves the response
+// Извлечение ответа
 function getHardResponse(userText) {
     let botResponse = getBotResponse(userText);
     let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
@@ -55,12 +55,12 @@ function getHardResponse(userText) {
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
-//Gets the text text from the input box and processes it
+//Получает текст из поля ввода и обрабатывает его
 function getResponse() {
     let userText = $("#textInput").val();
 
     if (userText == "") {
-        userText = "I love Code Palace!";
+        userText = "Диплом";
     }
 
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
@@ -75,7 +75,7 @@ function getResponse() {
 
 }
 
-// Handles sending text via button clicks
+// Обработка отправки текста при нажатии на кнопку
 function buttonSendText(sampleText) {
     let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
 
@@ -93,9 +93,11 @@ function sendButton() {
     getResponse();
 }
 
+/*
 function heartButton() {
     buttonSendText("Heart clicked!")
 }
+*/
 
 // Press enter to send a message
 $("#textInput").keypress(function (e) {

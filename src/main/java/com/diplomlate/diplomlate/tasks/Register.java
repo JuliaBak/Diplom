@@ -1,4 +1,4 @@
-package com.diplomlate.diplomlate.dao;
+package com.diplomlate.diplomlate.tasks;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.User;
@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class RegisterDao {
+public class Register {
     public String RegisterInDB(User user) {
         Connection con = DBConnection.getConnection();
         String sqlInsert = "INSERT INTO diplomdb.users (user_name, user_password, user_email) values (?,?,?) ";

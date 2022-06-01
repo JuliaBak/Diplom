@@ -1,8 +1,8 @@
-<%@ page import="com.diplomlate.diplomlate.dao.StudyAreasTasks" %>
+<%@ page import="com.diplomlate.diplomlate.tasks.StudyAreasTasks" %>
 <%@ page import="com.diplomlate.diplomlate.entities.Speciality" %>
-<%@ page import="com.diplomlate.diplomlate.dao.SpecialitiesTasks" %>
+<%@ page import="com.diplomlate.diplomlate.tasks.SpecialitiesTasks" %>
 <%@ page import="com.diplomlate.diplomlate.entities.SpProfile" %>
-<%@ page import="com.diplomlate.diplomlate.dao.SpProfilesTasks" %>
+<%@ page import="com.diplomlate.diplomlate.tasks.SpProfilesTasks" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -71,7 +71,7 @@
                 Профили
             </h2>
             <%
-                for(SpProfile spProfile: SpProfilesTasks.searchedSpProfiles)
+                for(SpProfile spProfile: SpProfilesTasks.searchedAllSpProfiles)
                 {
                     out.print(" <div class=\"cardsContent card-3\">");
                     out.print(" <div class=\"fab\"></div>");

@@ -1,19 +1,19 @@
 function getBotResponse(input) {
-    //rock paper scissors
-    if (input == "rock") {
-        return "paper";
-    } else if (input == "paper") {
-        return "scissors";
-    } else if (input == "scissors") {
-        return "rock";
+    //Камень ножницы бумага
+    if (input == "Камень") {
+        return "Бумага";
+    } else if (input == "Бумага") {
+        return "Ножницы";
+    } else if (input == "Ножницы") {
+        return "Камень";
     }
 
     // Simple responses
-    if (input == "hello") {
-        return "Hello there!";
-    } else if (input == "goodbye") {
-        return "Talk to you later!";
+    if (input == "Привет") {
+        return "Привет!";
+    } else if (input == "Пока") {
+        return "Пока!";
     } else {
-        return "Try asking something else!";
+        return "Прости, я не знаю ответа...!";
     }
 }

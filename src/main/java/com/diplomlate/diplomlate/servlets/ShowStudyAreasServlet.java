@@ -1,8 +1,7 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.dao.SpecialitiesTasks;
-import com.diplomlate.diplomlate.dao.StudyAreasTasks;
-import com.diplomlate.diplomlate.entities.Speciality;
+import com.diplomlate.diplomlate.tasks.SpecialitiesTasks;
+import com.diplomlate.diplomlate.tasks.StudyAreasTasks;
 import com.diplomlate.diplomlate.entities.StudyArea;
 
 import javax.servlet.*;
@@ -12,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.diplomlate.diplomlate.dao.SpecialitiesTasks.specialities;
+import static com.diplomlate.diplomlate.tasks.SpecialitiesTasks.specialities;
 
 @WebServlet(name = "ShowStudyAreasServlet", value = "/ShowStudyAreasServlet")
 public class ShowStudyAreasServlet extends HttpServlet {

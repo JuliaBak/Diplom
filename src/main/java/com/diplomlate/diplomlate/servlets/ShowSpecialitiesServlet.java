@@ -1,7 +1,6 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.dao.RegisterDao;
-import com.diplomlate.diplomlate.dao.SpecialitiesTasks;
+import com.diplomlate.diplomlate.tasks.SpecialitiesTasks;
 import com.diplomlate.diplomlate.entities.Speciality;
 
 import javax.servlet.*;

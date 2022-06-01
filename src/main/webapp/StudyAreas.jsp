@@ -1,4 +1,4 @@
-<%@ page import="com.diplomlate.diplomlate.dao.StudyAreasTasks" %>
+<%@ page import="com.diplomlate.diplomlate.tasks.StudyAreasTasks" %>
 <%@ page import="com.diplomlate.diplomlate.entities.StudyArea" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

@@ -1,4 +1,4 @@
-package com.diplomlate.diplomlate.dao;
+package com.diplomlate.diplomlate.tasks;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.Speciality;
@@ -6,8 +6,6 @@ import com.diplomlate.diplomlate.entities.Speciality;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.diplomlate.diplomlate.dao.StudyAreasTasks.sa_specialities;
 
 public class SpecialitiesTasks {
 

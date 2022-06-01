@@ -1,4 +1,4 @@
-package com.diplomlate.diplomlate.dao;
+package com.diplomlate.diplomlate.tasks;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.User;
@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class LoginDao {
+public class Login {
     public boolean validateUser(User user)
     {
         boolean result = false;

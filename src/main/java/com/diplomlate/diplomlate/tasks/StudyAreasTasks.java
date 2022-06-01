@@ -1,4 +1,4 @@
-package com.diplomlate.diplomlate.dao;
+package com.diplomlate.diplomlate.tasks;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.Speciality;

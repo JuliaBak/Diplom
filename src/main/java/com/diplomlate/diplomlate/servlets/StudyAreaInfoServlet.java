@@ -1,8 +1,7 @@
 package com.diplomlate.diplomlate.servlets;
 
-import com.diplomlate.diplomlate.dao.StudyAreasTasks;
+import com.diplomlate.diplomlate.tasks.StudyAreasTasks;
 import com.diplomlate.diplomlate.entities.Speciality;
-import com.diplomlate.diplomlate.entities.StudyArea;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

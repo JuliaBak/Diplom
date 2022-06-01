@@ -1,4 +1,4 @@
-package com.diplomlate.diplomlate.dao;
+package com.diplomlate.diplomlate.tasks;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
 import com.diplomlate.diplomlate.entities.Discipline;
@@ -22,7 +22,7 @@ public class SpProfilesTasks {
     /**
      * Many speciality profiles you are searching for, referring to one speciality
      */
-    public static List<SpProfile> searchedSpProfiles = new ArrayList<>();
+    public static List<SpProfile> searchedAllSpProfiles = new ArrayList<>();
 
 
     /**
@@ -48,6 +48,7 @@ public class SpProfilesTasks {
 
 
     public String ShowAllSpProf() {
+        spProfiles.clear();
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * FROM sp_profiles ";
 
@@ -89,6 +90,16 @@ public class SpProfilesTasks {
         return null;
     }
 
+    public void SearchProfilesBySpecIDInAllSp(int spec_id)
+    {
+        searchedAllSpProfiles.clear();
+        for (SpProfile spProf : spProfiles) {
+            if ((spProf.getSp_prof_spec_id() == (spec_id))) {
+                searchedAllSpProfiles.add(spProf);
+            }
+        }
+    }
+
     public String SearchProfilesBySpecID(int spec_id) {
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * FROM sp_profiles WHERE sp_prof_spec_id=? ";
@@ -107,7 +118,7 @@ public class SpProfilesTasks {
                 spProfile.setSp_prof_description(rs.getString("sp_profiles_description"));
                 spProfile.setSp_prof_spec_id(rs.getInt("sp_prof_spec_id"));
 
-                searchedSpProfiles.add(spProfile);
+                searchedAllSpProfiles.add(spProfile);
                 i++;
             }
 
