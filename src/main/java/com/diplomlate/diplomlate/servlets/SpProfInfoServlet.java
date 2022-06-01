@@ -23,10 +23,9 @@ public class SpProfInfoServlet extends HttpServlet {
 
        /* String result = dao.SearchSASpecialitiesBySpecID(searched_spec_name);
         dao.FindSAinList(searched_spec_name);*/
-        disciplines.clear();
+
         daoSpProf.SearchDisciplinesByProdId(searchedSpProf.getSp_prof_id());
 
-        jobs.clear();
         daoSpProf.SearchJobsByProfId(searchedSpProf.getSp_prof_id());
 
         if (spProfile != null) {

@@ -135,6 +135,7 @@ public class SpProfilesTasks {
     }
 
     public String SearchDisciplinesByProdId(int sp_prof_id) {
+        disciplines.clear();
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * " +
                 "FROM disciplines dis " +
@@ -171,6 +172,7 @@ public class SpProfilesTasks {
     }
 
     public String SearchJobsByProfId(int sp_prof_id) {
+        jobs.clear();
         Connection con = DBConnection.getConnection();
         String sql ="SELECT * " +
                 "FROM jobs job " +

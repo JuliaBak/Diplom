@@ -1,4 +1,12 @@
 function getBotResponse(input) {
+
+    var helloLines = ['Привет', 'Рад тебя видеть', 'Доброго времени суток'];
+    var userHelloLines = ['Приветствую', 'Здравствуйте'];
+
+    var goodbyeLines = ['Пока', 'Рад был видеть тебя', 'Пока! Еще увидимся', 'Пока! До скорых встреч'];
+    var userGoodbyeLines = ['Прощай'];
+    var ranAnswer = "";
+
     //Камень ножницы бумага
     if (input == "Камень") {
         return "Бумага";
@@ -9,11 +17,24 @@ function getBotResponse(input) {
     }
 
     // Simple responses
-    if (input == "Привет") {
-        return "Привет!";
-    } else if (input == "Пока") {
-        return "Пока!";
+    /*if (input == "Привет" || input == "Здравствуй")*/
+    if(checkAvailability(userHelloLines,input) || checkAvailability(helloLines,input)){
+        ranAnswer = RandArray(helloLines);
+        return ranAnswer+"!"; /*"Привет!";*/
+    } else if (checkAvailability(goodbyeLines,input) || checkAvailability(userGoodbyeLines,input)) {
+        ranAnswer = RandArray(goodbyeLines);
+        return ranAnswer+"!";
     } else {
-        return "Прости, я не знаю ответа...!";
+        return "Прости, я не знаю ответа...";
     }
+}
+
+function RandArray(array){
+    var rand = Math.random()*array.length | 0;
+    var rValue = array[rand];
+    return rValue;
+}
+
+function checkAvailability(replies, val) {
+    return replies.some(arrVal => val === arrVal);
 }

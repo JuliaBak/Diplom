@@ -23,7 +23,7 @@
                 <li><a href="Main.jsp">Главная</a></li>
                 <li><a href="About.html">О нас</a></li>
                 <li>
-                    <a href="#" class="desktop-link">Специальности</a>
+                    <a class="desktop-link">Специальности</a>
                     <input type="checkbox" id="show-features">
                     <label for="show-features">Специальности</label>
                     <ul>
