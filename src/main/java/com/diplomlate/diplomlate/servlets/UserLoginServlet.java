@@ -36,7 +36,7 @@ public class UserLoginServlet extends HttpServlet {
             //TODO: класс notifications - должен представлять различные уведомления. Надо сделать
             out.println("<span class=\"notifications\">Неверно введены данные!</span>");
 
-            RequestDispatcher req = request.getRequestDispatcher("Register_3.jsp");
+            RequestDispatcher req = request.getRequestDispatcher("Login.jsp");
             req.include(request, response);
 
         }
@@ -52,7 +52,7 @@ public class UserLoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/Register_3.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/Login.jsp");
         requestDispatcher.forward(req, resp);
     }
 }
