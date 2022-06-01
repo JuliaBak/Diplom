@@ -9,18 +9,25 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static com.diplomlate.diplomlate.dao.SpProfilesTasks.*;
+
 @WebServlet(name = "SpProfInfoServlet", value = "/sp_prof_info")
 public class SpProfInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        SpProfilesTasks daoSpec = new SpProfilesTasks();
+        SpProfilesTasks daoSpProf = new SpProfilesTasks();
 
-        String searched_prof_name = (request.getQueryString());
-        SpProfile spProfile = daoSpec.FindSpProfById(Integer.parseInt(searched_prof_name));
+        String searched_SpProd_Id = (request.getQueryString());
+        SpProfile spProfile = daoSpProf.FindSpProfById(Integer.parseInt(searched_SpProd_Id));
 
        /* String result = dao.SearchSASpecialitiesBySpecID(searched_spec_name);
         dao.FindSAinList(searched_spec_name);*/
+        disciplines.clear();
+        daoSpProf.SearchDisciplinesByProdId(searchedSpProf.getSp_prof_id());
+
+        jobs.clear();
+        daoSpProf.SearchJobsByProfId(searchedSpProf.getSp_prof_id());
 
         if (spProfile != null) {
 

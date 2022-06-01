@@ -3,6 +3,8 @@
 <%@ page import="com.diplomlate.diplomlate.dao.SpecialitiesTasks" %>
 <%@ page import="com.diplomlate.diplomlate.entities.SpProfile" %>
 <%@ page import="com.diplomlate.diplomlate.dao.SpProfilesTasks" %>
+<%@ page import="com.diplomlate.diplomlate.entities.Discipline" %>
+<%@ page import="com.diplomlate.diplomlate.entities.Job" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -59,7 +61,25 @@
         out.print(" <h2>" + SpProfilesTasks.searchedSpProf.getSp_prof_name() + "</h2>" );
         out.print("<br/>");
         out.print(" <h3>" + SpProfilesTasks.searchedSpProf.getSp_prof_description() + "</h3>" );
-    %>
+        out.print("<br/>");
+        out.print(" <h2>" + "Дисциплины" + "</h2>" );
+        out.print("<br/>");
+
+        for(Discipline discipline: SpProfilesTasks.disciplines)
+        {
+            out.print("<h3>" + discipline.getDiscipline_name() + "</h3>");
+            out.print("<br/>");
+        }
+
+        out.print(" <h2>" + "Кем вы можете стать и чем заниматься..." + "</h2>" );
+        out.print("<br/>");
+
+        for(Job job: SpProfilesTasks.jobs)
+        {
+            out.print("<h3>" + job.getJob_name() + "</h3>");
+            out.print("<br/>");
+        }
+        %>
 </div>
 
 </body>
