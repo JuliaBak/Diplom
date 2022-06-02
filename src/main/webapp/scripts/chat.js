@@ -1,5 +1,5 @@
 // (Прокручивание элемента) Collapsible
-var collElem = document.getElementsByClassName("collapsible");
+var collElem = document.getElementsByClassName("chat-main-folder");
 
 for (let i = 0; i < collElem.length; i++) {
     collElem[i].addEventListener("click", function () {
@@ -53,8 +53,11 @@ firstBotMessage();
 // Извлечение ответа
 function getHardResponse(userText) {
     let botResponse = getBotResponse(userText);
-    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
-    $("#chatbox").append(botHtml);
+
+        let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+        $("#chatbox").append(botHtml);
+
+     /*  botResponse.split("\n")*/
 
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }

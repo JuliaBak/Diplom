@@ -449,6 +449,7 @@ nav .content .links{
     border: 2px solid black;
     border-radius: 50px;
     transition: all .3s ease;
+    background: white;
 }
 .cardsContent .fab{
     font-size: 70px;
@@ -597,4 +598,31 @@ nav .content .links{
 }
 .table-container table tbody tr:last-child td:last-child {
     border-radius: 0 0 20px 0;
+}
+
+
+section {
+    background-color: #c5f3ff;
+    padding: 1rem;
+}
+
+.main-content-page {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+.section-items
+{
+    justify-items: center;
+    align-content: space-between;
+}
+
+@media (min-width: 1170px) {
+    section {
+        padding: 1rem calc(50% - 585px);
+    }
 }
