@@ -13,45 +13,44 @@
 </head>
 <body>
 
-<%@include file="upperMenu.jsp"%>
+<%@include file="upperMenu.jsp" %>
 
 <section>
     <div class="main-content-page">
         <div class="section-items">
-<div class="box-container">
-    <div class="box-wrap">
-        <div class="cards">
-            <div class="skip_element">
+            <div class="box-container">
+                <div class="box-wrap">
+                    <div class="cards">
+                        <div class="skip_element">
 
-    <h2 class="header">
-       Направления подготовки
-    </h2>
-  <%--  <div class="specialities">--%>
-        <%
-            for(StudyArea studyArea: StudyAreasTasks.study_areas)
-            {
-                out.print(" <div class=\"cardsContent card-3\">");
-                out.print(" <div class=\"fab\"></div>");
-                out.print("<h2>" + studyArea.getSa_name() + "</h2>");
+                            <h2 class="header">
+                                Направления подготовки
+                            </h2>
+                            <%--  <div class="specialities">--%>
+                            <%
+                                for (StudyArea studyArea : StudyAreasTasks.study_areas) {
+                                    out.print(" <div class=\"cardsContent card-3\">");
+                                    out.print(" <div class=\"fab\"></div>");
+                                    out.print("<h2>" + studyArea.getSa_name() + "</h2>");
 
-               /* request.setAttribute("sa_id", studyArea.getSa_id());*/
-                /* out.print("<p>" + studyArea.getSa_description() + "</p>"); */
-                out.print("<a href=\"study-area-info"+"?"+studyArea.getSa_id()+"\">Узнать больше</a>");
-                out.print("</div>");
+                                    /* request.setAttribute("sa_id", studyArea.getSa_id());*/
+                                    /* out.print("<p>" + studyArea.getSa_description() + "</p>"); */
+                                    out.print("<a href=\"study-area-info" + "?" + studyArea.getSa_id() + "\">Узнать больше</a>");
+                                    out.print("</div>");
 
-            }
-        %>
+                                }
+                            %>
 
-           <%-- </div>  --%>
+                            <%-- </div>  --%>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-    </div>
-    </div>
 </section>
 
-<%@include file="chatBot.jsp"%>
+<%@include file="chatBot.jsp" %>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,16 +13,35 @@
 </head>
 <body>
 
-<%@include file="upperMenu.jsp"%>
+<%@include file="upperMenu.jsp" %>
 
-<div class="main-text">
-    <h2>Дипломный проект.</h2>
-    <h2>Представление специальностей</h2>
+<div class="items-container">
+    <section class="section-one">
+        <div id="main">
+            <div class="main-text-2">
+                <h2>Дипломный проект.</h2>
+                <h2>Представление специальностей</h2>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="about">
+            <div class="main-text-2">
+                <h2>Дипломный проект.</h2>
+                <h3>Данные проект представляет улучшенное представление специальностей, прдедставленных Поволжским
+                    Государственным Университетом Телекоммуникаций и Информацтики.
+                    Способствует визуальному представлению каждой из специальностей и подробное изучение их
+                    особенностей.
+                    Представлен студентами группы РПИС-82, Бакай Ю.О. и Лариной В.А.</h3>
+            </div>
+        </div>
+    </section>
 </div>
 
-<%@include file="chatBot.jsp"%>
+<%@include file="chatBot.jsp" %>
 
-</body>
+<%--</body>--%>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="scripts/responses.js"></script>
 <script src="scripts/chat.js"></script>

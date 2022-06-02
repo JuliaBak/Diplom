@@ -9,8 +9,8 @@
     <div class="content">
       <div class="logo"><a href="Main.jsp">Диплом</a></div>
       <ul class="links">
-        <li><a href="Main.jsp">Главная</a></li>
-        <li><a href="About.jsp">О нас</a></li>
+        <li><a href="Main.jsp#main">Главная</a></li>
+        <li><a href="Main.jsp#about">О нас</a></li>
         <li>
           <a class="desktop-link">Специальности</a>
           <input type="checkbox" id="show-features">

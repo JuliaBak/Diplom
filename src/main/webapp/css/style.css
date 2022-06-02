@@ -9,16 +9,21 @@
     text-decoration: none;
     font-family: 'Times New Roman', sans-serif;
 }
+/*
+html{
+    scroll-behavior: smooth;
+}*/
 
 p {
     margin: 0;
-    padding: 0 0 10px 0; // Отступ 10px снизу
+    padding: 0 0 10px 0; /*Отступ 10px снизу*/
 }
 
 .wrapper{
     background: #171c24;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 .wrapper nav{
     position: relative;
@@ -127,7 +132,7 @@ nav .content .links{
     position: absolute;
     background: #171c24;
     top: 80px;
-    z-index: -1;
+    /*z-index: 101;*/
     opacity: 0;
     visibility: hidden;
 }
@@ -258,18 +263,41 @@ nav .content .links{
     }
 }
 
-.main-text{
-    position: absolute;
+.main-text-2{
+    position: relative;
     top: 40%;
     left: 50%;
     width: 100%;
-    z-index: -1;
+    color: black;
+    /* z-index: -5;*/
+    /*z-index: -60;*/
     padding: 0 20px;
     text-align: center;
     transform: translate(-50%, -50%);
 }
 
+.main-text-2 h2{
+    font-size: 45px;
+    margin: 5px 0;
+}
+.main-text-2 h3
+{
+    font-size: 20px;
+    margin: 5px 0;
+}
 
+.main-text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    color: black;
+   /* z-index: -5;*/
+    /*z-index: -60;*/
+    padding: 0 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
 
 .main-text h2{
     font-size: 45px;
@@ -287,7 +315,8 @@ nav .content .links{
     top: 50%;
     left: 50%;
     width: 100%;
-    z-index: -1;
+  /*  z-index: -5;*/
+ /*   z-index: -80;*/
     padding: 0 20px;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -415,6 +444,8 @@ nav .content .links{
     margin: 0 auto;
     text-align: center;
 
+  /*  z-index: -5;*/
+
     width: 100%;/*
     resize: vertical;*/
    /* width: 100%;
@@ -523,7 +554,8 @@ nav .content .links{
     top: 40%;
     left: 50%;
     width: 100%;
-    z-index: -1;
+   /* z-index: -5;*/
+ /*   z-index: -100;*/
     padding: 0 20px;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -600,10 +632,26 @@ nav .content .links{
     border-radius: 0 0 20px 0;
 }
 
-
 section {
-    background-color: #c5f3ff;
-    padding: 1rem;
+  /*  background-color: #c5f3ff;
+    padding: 1rem;*/
+  /*  z-index: -10;*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* color: white;*/
+    scroll-snap-align: start;
+}
+
+.section-one{
+    background: #4072b5;
+}
+
+.items-container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .main-content-page {
