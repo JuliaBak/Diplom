@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Cards Specialities</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -26,7 +26,7 @@
                 <li><a href="Main.jsp">Главная</a></li>
                 <li><a href="About.html">О нас</a></li>
                 <li>
-                    <a class="desktop-link">Специальности</a>
+                    <a href="#" class="desktop-link">Специальности</a>
                     <input type="checkbox" id="show-features">
                     <label for="show-features">Специальности</label>
                     <ul>

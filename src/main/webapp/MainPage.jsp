@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Main Page</title>
-    <link rel="stylesheet" href="mainDesign.css">
+    <link rel="stylesheet" href="css/mainDesign.css">
 </head>
 
 

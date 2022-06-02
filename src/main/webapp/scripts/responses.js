@@ -1,7 +1,7 @@
 function getBotResponse(input) {
 
     var helloLines = ['Привет', 'Рад тебя видеть', 'Доброго времени суток'];
-    var userHelloLines = ['Приветствую', 'Здравствуйте'];
+    var userHelloLines = ['Приветствую', 'Здравствуйте', 'привет', 'здравствуйте', 'здравствуй', 'здорово', 'привееет', 'Здравствуй'];
 
     var goodbyeLines = ['Пока', 'Рад был видеть тебя', 'Пока! Еще увидимся', 'Пока! До скорых встреч'];
     var userGoodbyeLines = ['Прощай'];
@@ -20,7 +20,7 @@ function getBotResponse(input) {
     /*if (input == "Привет" || input == "Здравствуй")*/
     if(checkAvailability(userHelloLines,input) || checkAvailability(helloLines,input)){
         ranAnswer = RandArray(helloLines);
-        return ranAnswer+"!"; /*"Привет!";*/
+        return ranAnswer+"!";
     } else if (checkAvailability(goodbyeLines,input) || checkAvailability(userGoodbyeLines,input)) {
         ranAnswer = RandArray(goodbyeLines);
         return ranAnswer+"!";
@@ -37,4 +37,10 @@ function RandArray(array){
 
 function checkAvailability(replies, val) {
     return replies.some(arrVal => val === arrVal);
+}
+
+function matchPattern(msq)
+{
+    const helloPat = /^([пП]ривет[-.?!)(,:]*\s*|[Зз]дравствуй(те)*[-.?!)(,:]*\s*$)/;
+    return helloPat.test(msg);
 }

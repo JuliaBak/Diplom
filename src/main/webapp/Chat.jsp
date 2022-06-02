@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
@@ -35,7 +35,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="desktop-link">Тестирование</a>
+                    <a class="desktop-link">Тестирование</a>
                     <input type="checkbox" id="show-services">
                     <label for="show-services">Тестирование</label>
                     <ul>
@@ -65,21 +65,21 @@
     </nav>
 </div>
 
-<!-- CHAT BAR BLOCK -->
 <div class="chat-bar-collapsible">
     <button id="chat-button" type="button" class="collapsible">Чат
-        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        <i id="chat-icon" style="color: white;" class="fa fa-fw fa-comments-o"></i>
     </button>
 
-    <div class="content">
+    <div class="content-chat">
         <div class="full-chat-block">
             <!-- Message Container -->
             <div class="outer-container">
                 <div class="chat-container">
                     <!-- Messages -->
                     <div id="chatbox">
-                        <h5 id="chat-timestamp"></h5>
+                        <h5 id="chat-time-display"></h5>
                         <p id="botStarterMessage" class="botText"><span>Загрузка...</span></p>
+                        <p id="botSecondMessage" class="botText"><span>...</span></p>
                     </div>
 
                     <!-- User input box -->
@@ -90,8 +90,9 @@
                             <p></p>
                         </div>
 
+                        <!-- Messaging button, paper plane-->
                         <div class="chat-bar-icons">
-                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                            <i id="chat-icon" style="color: black;" class="fa fa-fw fa-send"
                                onclick="sendButton()"></i>
                         </div>
                     </div>

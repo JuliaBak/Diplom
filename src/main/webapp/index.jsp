@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Welcome Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
@@ -25,7 +25,8 @@
     </form>
     <form class="forms" action="user_login_success" method="get">
         <input type="submit" value="Логин" />
-    </form><%--
+    </form>
+    <%--
     <form class="forms" action="Main.jsp" method="get">
         <input type="submit" value="Меню" />
     </form>--%>

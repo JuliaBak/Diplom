@@ -1,8 +1,8 @@
-// Collapsible
-var coll = document.getElementsByClassName("collapsible");
+// (Прокручивание элемента) Collapsible
+var collElem = document.getElementsByClassName("collapsible");
 
-for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
+for (let i = 0; i < collElem.length; i++) {
+    collElem[i].addEventListener("click", function () {
         this.classList.toggle("active");
 
         var content = this.nextElementSibling;
@@ -16,10 +16,11 @@ for (let i = 0; i < coll.length; i++) {
     });
 }
 
+/*Отображение времени*/
 function getTime() {
-    let today = new Date();
-    hours = today.getHours();
-    minutes = today.getMinutes();
+    let nowTime = new Date();
+    hours = nowTime.getHours();
+    minutes = nowTime.getMinutes();
 
     if (hours < 10) {
         hours = "0" + hours;
@@ -29,18 +30,21 @@ function getTime() {
         minutes = "0" + minutes;
     }
 
-    let time = hours + ":" + minutes;
-    return time;
+   /* let time = hours + ":" + minutes;*/
+    return hours + ":" + minutes;
 }
 
-// Gets the first message
+// Получает первое сообщение
 function firstBotMessage() {
-    let firstMessage = "Здравствуй! Мое имя Диппи"
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+    let firstMsg = "Здравствуй! Мое имя Диппи"
+    let secondMsg = "Я здесь, чтобы помочь тебе!"
+
+    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMsg + '</span></p>';
+    document.getElementById("botSecondMessage").innerHTML = '<p class="botText"><span>' + secondMsg + '</span></p>';
 
     let time = getTime();
 
-    $("#chat-timestamp").append(time);
+    $("#chat-time-display").append(time);
     document.getElementById("userInput").scrollIntoView(false);
 }
 
@@ -99,7 +103,7 @@ function heartButton() {
 }
 */
 
-// Press enter to send a message
+//  Обработка enter, для отправики сообщения
 $("#textInput").keypress(function (e) {
     if (e.which == 13) {
         getResponse();

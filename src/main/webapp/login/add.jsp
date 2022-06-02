@@ -3,7 +3,7 @@
 <head>
     <title>Register New User</title>
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
@@ -113,6 +113,23 @@ $(document).ready(function ()
         )
     });
 });
+
+/*$(document).ready(function ()
+{
+    $('#password').change(function ()
+    { var password = $('#password').val();
+        $.ajax(
+            {
+                type:'POST',
+                data: {password:password},
+                url:'username-validation',
+                success: function (result){
+                    $('#result').html(result);
+                }
+            }
+        )
+    });
+});*/
 </script>
 
 </body>

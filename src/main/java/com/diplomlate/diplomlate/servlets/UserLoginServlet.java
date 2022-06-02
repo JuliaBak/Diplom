@@ -33,9 +33,8 @@ public class UserLoginServlet extends HttpServlet {
         {
             response.setContentType("text/html; charset=utf-8");
             PrintWriter out = response.getWriter();
-            //TODO: класс notifications - должен представлять различные уведомления. Надо сделать
-            //TODO: можно попробовать сделать как при регистрации с использованием js
-            out.println("<span class=\"notifications\" style=\"color: red; font-size: 18px\">Неверно введены данные!</span>");
+
+                out.println("Неверно введены данные!");
 
             RequestDispatcher req = request.getRequestDispatcher("Login.jsp");
             req.include(request, response);
@@ -43,6 +42,10 @@ public class UserLoginServlet extends HttpServlet {
         }
         else
         {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = response.getWriter();
+            out.println("");
+
             request.setAttribute("usernameLogin", username);
             request.setAttribute("passwordLogin", password);
 
