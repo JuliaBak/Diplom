@@ -13,7 +13,7 @@ import java.util.List;
 
 import static com.diplomlate.diplomlate.tasks.SpecialitiesTasks.specialities;
 
-@WebServlet(name = "ShowStudyAreasServlet", value = "/ShowStudyAreasServlet")
+@WebServlet(name = "ShowStudyAreasServlet", value = "/show-study-areas")
 public class ShowStudyAreasServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -53,6 +53,10 @@
 
 </script>--%>
 
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
 
 <div <%--class="options"--%>>
     <%
@@ -71,7 +75,7 @@
     </div>
     <div class="data-input-user">
         <div>
-            <h2>Добавить пользователя</h2>
+            <h2 style="font-size: 18px">Добавить пользователя</h2>
         </div>
         <form class="forms-user" method="post">
            <%-- <label>Имя: </label>--%>

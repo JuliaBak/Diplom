@@ -6,7 +6,7 @@
 }
 
 .chat-main-folder {
-    background-color: #57B3FF;
+    background-color: #171c24;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -115,7 +115,7 @@
 .userText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #57B3FF;
+    background: #171c24;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;

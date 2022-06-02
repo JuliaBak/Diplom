@@ -17,8 +17,9 @@
           <label for="show-features">Специальности</label>
           <ul>
             <%--<li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
-            <li><a href="ShowStudyAreasServlet">Направления подготовки</a></li>
+            <li><a href="show-study-areas">Направления подготовки</a></li>
             <li><a href="ShowSpecialitiesServlet">Специальности</a></li>
+              <li><a href="ShowSpecialitiesServlet">Специальности 2</a></li>
           </ul>
         </li>
         <li>

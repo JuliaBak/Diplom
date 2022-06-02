@@ -15,21 +15,26 @@
 
 <%@include file="upperMenu.jsp" %>
 
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
 <div class="items-container">
-    <section class="section-one">
+    <section <%--class="section-one"--%>>
         <div id="main">
             <div class="main-text-2">
-                <h2>Дипломный проект.</h2>
-                <h2>Представление специальностей</h2>
+                <h2 style="color: black; text-shadow: 0 0 10px white">Дипломный проект</h2>
+                <h2 style="color: black; text-shadow: 0 0 10px white">Представление специальностей</h2>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="section-dark">
         <div id="about">
             <div class="main-text-2">
-                <h2>Дипломный проект.</h2>
-                <h3>Данные проект представляет улучшенное представление специальностей, прдедставленных Поволжским
+                <h2 style="color: black; text-shadow: 0 0 10px white; ">Дипломный проект</h2>
+                <h3 style="color: black; text-shadow: 0 0 10px white">
+                    Данный проект представляет улучшенное представление специальностей, прдедставленных Поволжским
                     Государственным Университетом Телекоммуникаций и Информацтики.
                     Способствует визуальному представлению каждой из специальностей и подробное изучение их
                     особенностей.

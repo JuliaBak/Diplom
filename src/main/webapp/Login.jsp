@@ -21,6 +21,10 @@
     </nav>
 </div>
 
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
 <div>
     <div class="main-text">
         <span style="color: red; font-size: 18px" id="notification"></span>

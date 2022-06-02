@@ -19,6 +19,10 @@
     </nav>
 </div>
 
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
 <div class="options">
     <form class="forms" action="add" method="get">
         <input type="submit" value="Зарегистрироваться" />
