@@ -1,6 +1,8 @@
 package com.diplomlate.diplomlate.entities;
 
 public class User {
+
+    public static User loggedUser = new User();
     private String name;
     private String password;
 

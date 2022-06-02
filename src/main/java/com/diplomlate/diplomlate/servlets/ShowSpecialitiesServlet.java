@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "ShowSpecialitiesServlet", value = "/ShowSpecialitiesServlet")
+@WebServlet(name = "ShowSpecialitiesServlet", value = "/show-specialities")
 public class ShowSpecialitiesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

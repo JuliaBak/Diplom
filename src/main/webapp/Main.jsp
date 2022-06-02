@@ -25,6 +25,10 @@
             <div class="main-text-2">
                 <h2 style="color: black; text-shadow: 0 0 10px white">Дипломный проект</h2>
                 <h2 style="color: black; text-shadow: 0 0 10px white">Представление специальностей</h2>
+             <%--  <%
+                   if(!request.getAttribute("usernameLogin").toString().isEmpty())
+                   { out.println( "<h2 style=\"color: black; text-shadow: 0 0 10px white\">"+ request.getAttribute("usernameLogin").toString() + "</h2>" );}
+               %>--%>
             </div>
         </div>
     </section>

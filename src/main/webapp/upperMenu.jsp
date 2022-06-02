@@ -1,4 +1,4 @@
-
+<%@ page import="static com.diplomlate.diplomlate.entities.User.loggedUser" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--Для встройки данного сегмента необходимо, что в "голове" был указан style.css--%>
 <div class="wrapper">
@@ -7,7 +7,7 @@
     <input type="checkbox" id="show-menu">
     <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
     <div class="content">
-      <div class="logo"><a href="Main.jsp">Диплом</a></div>
+      <div class="logo"><a href="Main.jsp#main">Диплом</a></div>
       <ul class="links">
         <li><a href="Main.jsp#main">Главная</a></li>
         <li><a href="Main.jsp#about">О нас</a></li>
@@ -18,8 +18,8 @@
           <ul>
             <%--<li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
             <li><a href="show-study-areas">Направления подготовки</a></li>
-            <li><a href="ShowSpecialitiesServlet">Специальности</a></li>
-              <li><a href="ShowSpecialitiesServlet">Специальности 2</a></li>
+            <li><a href="show-specialities">Специальности</a></li>
+              <li><a href="show-specialities">Специальности 2</a></li>
           </ul>
         </li>
         <li>
@@ -41,10 +41,20 @@
              </li>-->
           </ul>
         </li>
-        <%--  <li><a href="Chat.jsp">Обратная связь/Мессенджер</a></li>--%>
+        <%--  <li><a href="Chat.jsp">Обратная связь/Мессенджер</a></li>     --%>
         <li><a href="${pageContext.request.contextPath}/start">Выйти</a></li>
+        <%
+          if(!loggedUser.getName().isEmpty())
+          {
+            out.print("<li> <a class=\"desktop-link\">"+ loggedUser.getName() + "</a></li>");}
+        %>
       </ul>
     </div>
+   <%-- <%
+      if(!loggedUser.getName().isEmpty())
+      { out.print(" <label for=\"show-search\" class=\"search-icon\"><i class=\"fas fa-search\">"+ loggedUser.getName() + "</i></label>");
+        }
+    %>--%>
     <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
     <form action="#" class="search-box">
       <input type="text" placeholder="Начните ввод..." required>
