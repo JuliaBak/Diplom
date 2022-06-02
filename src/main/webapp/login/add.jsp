@@ -67,6 +67,7 @@
     %>
     <div class="main-text">
         <span style="color: red; font-size: 18px" id="result"></span>
+        <span style="color: red; font-size: 18px" id="passResult"></span>
     </div>
     <div class="data-input-user">
         <div>
@@ -101,10 +102,11 @@ $(document).ready(function ()
 {
     $('#username').change(function ()
     { var username = $('#username').val();
+        var mode = 1;
         $.ajax(
             {
                 type:'POST',
-                data: {username:username},
+                data: {username:username, mode:mode},
                 url:'username-validation',
                 success: function (result){
                     $('#result').html(result);
@@ -113,23 +115,26 @@ $(document).ready(function ()
         )
     });
 });
+</script>
 
-/*$(document).ready(function ()
-{
-    $('#password').change(function ()
-    { var password = $('#password').val();
-        $.ajax(
-            {
-                type:'POST',
-                data: {password:password},
-                url:'username-validation',
-                success: function (result){
-                    $('#result').html(result);
+<script>
+    $(document).ready(function ()
+    {
+        $('#password').change(function ()
+        { var password = $('#password').val();
+            var mode = 2;
+            $.ajax(
+                {
+                    type:'POST',
+                    data: {password:password, mode:mode},
+                    url:'username-validation',
+                    success: function (result){
+                        $('#result').html(result);
+                    }
                 }
-            }
-        )
+            )
+        });
     });
-});*/
 </script>
 
 </body>

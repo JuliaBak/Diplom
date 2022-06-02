@@ -27,7 +27,7 @@
             <div class="logo"><a href="Main.jsp">Диплом</a></div>
             <ul class="links">
                 <li><a href="Main.jsp">Главная</a></li>
-                <li><a href="About.html">О нас</a></li>
+                <li><a href="About.jsp">О нас</a></li>
                 <li>
                     <a class="desktop-link">Специальности</a>
                     <input type="checkbox" id="show-features">
@@ -85,49 +85,7 @@
         %>
 </div>
 
-<div class="chat-bar-collapsible">
-    <button id="chat-button" type="button" class="collapsible">Чат
-        <i id="chat-icon" style="color: white;" class="fa fa-fw fa-comments-o"></i>
-    </button>
-
-    <div class="content-chat">
-        <div class="full-chat-block">
-            <!-- Message Container -->
-            <div class="outer-container">
-                <div class="chat-container">
-                    <!-- Messages -->
-                    <div id="chatbox">
-                        <h5 id="chat-time-display"></h5>
-                        <p id="botStarterMessage" class="botText"><span>Загрузка...</span></p>
-                        <p id="botSecondMessage" class="botText"><span>...</span></p>
-                    </div>
-
-                    <!-- User input box -->
-                    <div class="chat-bar-input-block">
-                        <div id="userInput">
-                            <input id="textInput" class="input-box" type="text" name="msg"
-                                   placeholder="Напишите сообщение...">
-                            <p></p>
-                        </div>
-
-                        <!-- Messaging button, paper plane-->
-                        <div class="chat-bar-icons">
-                            <i id="chat-icon" style="color: black;" class="fa fa-fw fa-send"
-                               onclick="sendButton()"></i>
-                        </div>
-                    </div>
-
-                    <div id="chat-bar-bottom">
-                        <p></p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
+<%@include file="chatBot.jsp"%>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

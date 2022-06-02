@@ -7,6 +7,12 @@ function getBotResponse(input) {
     var userGoodbyeLines = ['Прощай'];
     var ranAnswer = "";
 
+    var userFunctionAsks = ['Что ты умеешь?', 'Какой твой функционал?', 'Каков твой фнкционал?', 'Какие функции ты имеешь?',
+    'Что ты можешь?', 'Что ты умеешь', 'что ты умеешь', 'что ты умеешь?'];
+
+    var mainFunctionsBot = "Я могу рассказать о наших направленяих подготовки! Для этого скажи мне \"Направления\"" +
+        "Еще я могу рассказать о наших специальностях! Скажи мне \"Специальности\"\n";
+
     //Камень ножницы бумага
     if (input == "Камень") {
         return "Бумага";
@@ -24,7 +30,10 @@ function getBotResponse(input) {
     } else if (checkAvailability(goodbyeLines,input) || checkAvailability(userGoodbyeLines,input)) {
         ranAnswer = RandArray(goodbyeLines);
         return ranAnswer+"!";
-    } else {
+    } else if (checkAvailability(userFunctionAsks,input)) {
+        ranAnswer = mainFunctionsBot;
+        return ranAnswer; }
+    else {
         return "Прости, я не знаю ответа...";
     }
 }

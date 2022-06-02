@@ -24,7 +24,7 @@
             <div class="logo"><a href="Main.jsp">Диплом</a></div>
             <ul class="links">
                 <li><a href="Main.jsp">Главная</a></li>
-                <li><a href="About.html">О нас</a></li>
+                <li><a href="About.jsp">О нас</a></li>
                 <li>
                     <a href="#" class="desktop-link">Специальности</a>
                     <input type="checkbox" id="show-features">
