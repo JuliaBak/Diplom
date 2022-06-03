@@ -47,7 +47,8 @@
         <%
           if(!loggedUser.getName().isEmpty())
           {
-            out.print("<li> <a class=\"desktop-link\">"+ loggedUser.getName() + "</a></li>");}
+            out.print("<li> <a href=\"UserProfile.jsp\" class=\"desktop-link\">"+ loggedUser.getName() + "</a></li>");
+          }
         %>
       </ul>
     </div>
@@ -62,4 +63,9 @@
       <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
     </form>--%>
   </nav>
+</div>
+
+
+<div>
+  <input class="back-button" type="button" onclick="history.back();" value="Назад"/>
 </div>
