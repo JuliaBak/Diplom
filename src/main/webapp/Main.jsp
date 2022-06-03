@@ -22,30 +22,55 @@
 <div class="items-container">
     <section <%--class="section-one"--%>>
         <div id="main">
-            <div class="main-text-2">
-                <h2 style="color: black; text-shadow: 0 0 10px white">Дипломный проект</h2>
-                <h2 style="color: black; text-shadow: 0 0 10px white">Представление специальностей</h2>
-             <%--  <%
-                   if(!request.getAttribute("usernameLogin").toString().isEmpty())
-                   { out.println( "<h2 style=\"color: black; text-shadow: 0 0 10px white\">"+ request.getAttribute("usernameLogin").toString() + "</h2>" );}
-               %>--%>
+            <%-- <div class="section-items">--%>
+            <div class="box-container">
+                <div class="box-wrap">
+                    <div class="main-text-2">
+                        <h2 style="color: black; text-shadow: 0 0 10px white">Дипломный проект</h2>
+                        <h2 style="color: black; text-shadow: 0 0 10px white">Представление специальностей</h2>
+                        <%--  <%
+                              if(!request.getAttribute("usernameLogin").toString().isEmpty())
+                              { out.println( "<h2 style=\"color: black; text-shadow: 0 0 10px white\">"+ request.getAttribute("usernameLogin").toString() + "</h2>" );}
+                          %>--%>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section-dark">
         <div id="about">
-            <div class="main-text-2">
-                <h2 style="color: black; text-shadow: 0 0 10px white; ">Дипломный проект</h2>
-                <h3 style="color: black; text-shadow: 0 0 10px white">
-                    Данный проект представляет улучшенное представление специальностей, прдедставленных Поволжским
-                    Государственным Университетом Телекоммуникаций и Информацтики.
-                    Способствует визуальному представлению каждой из специальностей и подробное изучение их
-                    особенностей.
-                    Представлен студентами группы РПИС-82, Бакай Ю.О. и Лариной В.А.</h3>
+            <%-- <div class="section-items">--%>
+            <div class="box-container">
+                <div class="box-wrap">
+                    <div class="main-text-2">
+                        <h2 style="color: black; text-shadow: 0 0 10px white; ">Дипломный проект</h2>
+                        <br/>
+                        <h2 style="color: black; text-shadow: 0 0 10px white">
+                            Данный проект представляет улучшенное представление специальностей бакалавриата,
+                            прдедставленных в
+                            Поволжским Государственным Университетом Телекоммуникаций и Информатики.
+                            Способствует визуальному представлению каждой из специальностей и подробное изучение их
+                            особенностей
+                        </h2>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+</section>
+
+<section>
+    <div id="study-info">
+        <%-- <div class="section-items">--%>
+        <div class="box-container">
+            <div class="box-wrap">
+                <div class="main-text-2">
+                    <h2 style="color: black; text-shadow: 0 0 10px white; ">Все об обучении</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </div>
 
 <%@include file="chatBot.jsp" %>

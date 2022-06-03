@@ -15,14 +15,17 @@
 
 <%@include file="upperMenu.jsp" %>
 
-<section>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<%--<section>--%>
     <div class="main-content-page">
-        <div class="section-items">
+       <%-- <div class="section-items">--%>
             <div class="box-container">
                 <div class="box-wrap">
                     <div class="cards">
-                        <div class="skip_element">
-
+                       <%-- <div class="skip_element">--%>
                             <h2 class="header">
                                 Направления подготовки
                             </h2>
@@ -46,9 +49,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+       <%-- </div>--%>
     </div>
-</section>
+<%--</section>--%>
 
 <%@include file="chatBot.jsp" %>
 

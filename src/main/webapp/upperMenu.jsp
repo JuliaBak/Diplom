@@ -12,7 +12,7 @@
         <li><a href="Main.jsp#main">Главная</a></li>
         <li><a href="Main.jsp#about">О нас</a></li>
         <li>
-          <a class="desktop-link">Специальности</a>
+          <a href="Main.jsp#study-info" class="desktop-link">Учеба</a>
           <input type="checkbox" id="show-features">
           <label for="show-features">Специальности</label>
           <ul>

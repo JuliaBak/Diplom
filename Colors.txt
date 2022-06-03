@@ -4,6 +4,8 @@
 #57ceff - another blue
 #57B3FF
 
+#4692d0 - dark blue
+
 Useful Code for notifications
 
 //<script scr="https://kit.fontawesome.com/a076d05399.js></script>

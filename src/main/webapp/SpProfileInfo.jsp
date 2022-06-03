@@ -18,35 +18,91 @@
 </head>
 <body>
 
-<%@include file="upperMenu.jsp"%>
+<%@include file="upperMenu.jsp" %>
 
-<div class="main-text">
-    <%
-        out.print(" <h2>" + SpProfilesTasks.searchedSpProf.getSp_prof_name() + "</h2>" );
-        out.print("<br/>");
-        out.print(" <h3>" + SpProfilesTasks.searchedSpProf.getSp_prof_description() + "</h3>" );
-        out.print("<br/>");
-        out.print(" <h2>" + "Дисциплины" + "</h2>" );
-        out.print("<br/>");
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 
-        for(Discipline discipline: SpProfilesTasks.disciplines)
-        {
-            out.print("<h3>" + discipline.getDiscipline_name() + "</h3>");
-            out.print("<br/>");
-        }
+<div style="overflow-y: scroll; top: 30%; bottom: 30%;"
+<%--class="items-container"--%>>
+    <%-- <div class="main-content-page">
+         <div class="section-items">--%>
+    <section class="section-white" style="width: 80%; margin: auto">
+        <div class="main-content-page">
+            <div class="box-container">
+                <div class="box-wrap">
+                    <%-- <div style="top:10%; bottom: 10%; ">--%>
+                    <div id="prof-name" <%--style=" vertical-align: middle"--%>>
+                        <div class="main-text-2">
+                            <%
+                                out.print(" <h2>" + SpProfilesTasks.searchedSpProf.getSp_prof_name() + "</h2>");
+                                out.print("<br/>");
+                                out.print(" <h3>" + SpProfilesTasks.searchedSpProf.getSp_prof_description() + "</h3>");
+                                out.print("<br/>");
+                            %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-- </div>--%>
+    </section>
 
-        out.print(" <h2>" + "Кем вы можете стать и чем заниматься..." + "</h2>" );
-        out.print("<br/>");
+    <section class="section-white" style="width: 80%; /*margin-left: 10%;*/ margin: auto">
+        <div class="main-content-page">
+            <div class="box-container">
+                <div class="box-wrap">
+                    <%--<div style="top:30%; ">--%>
+                    <div id="disciplines" <%--style=" vertical-align: middle"--%>>
 
-        for(Job job: SpProfilesTasks.jobs)
-        {
-            out.print("<h3>" + job.getJob_name() + "</h3>");
-            out.print("<br/>");
-        }
-        %>
+                        <div class="main-text-2">
+                            <%
+                                out.print(" <h2>" + "Дисциплины" + "</h2>");
+                                out.print("<br/>");
+
+                                out.print("<ol class=\"list-options\">");
+                                for (Discipline discipline : SpProfilesTasks.disciplines) {
+                                    out.print("<li>" + discipline.getDiscipline_name() + "</li>");
+                                }
+                                out.print("</ol>");
+                            %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--  </div>--%>
+    </section>
+
+    <section class="section-white" style="width: 80%; margin: auto;">
+        <div class="main-content-page">
+            <div class="box-container">
+                <div class="box-wrap">
+                    <%-- <div style="top:10%; bottom: 10%; ">--%>
+                    <div id="jobs" <%--style=" vertical-align: middle"--%>>
+
+                        <div class="main-text-2">
+                            <%
+                                out.print(" <h2>" + "Кем вы можете стать и чем заниматься..." + "</h2>");
+                                out.print("<br/>");
+
+                                out.print("<ol class=\"list-options\">");
+                                for (Job job : SpProfilesTasks.jobs) {
+                                    out.print("<li>" + job.getJob_name() + "</li>");
+                                }
+                                out.print("</ol>");
+                            %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--</div>--%>
+    </section>
 </div>
 
-<%@include file="chatBot.jsp"%>
+<%@include file="chatBot.jsp" %>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

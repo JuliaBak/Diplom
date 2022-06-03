@@ -264,10 +264,21 @@ nav .content .links{
     top: 40%;
     left: 50%;
     width: 100%;
-    color: black;
-    /* z-index: -5;*/
-    /*z-index: -60;*/
-    padding: 0 20px;
+    color: black;/*
+    margin: 5%;*/
+    padding: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.main-text-3{
+  /*  position: relative;*/
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    color: black;/*
+    margin: 5%;*/
+    padding: 20px;
     text-align: center;
     transform: translate(-50%, -50%);
 }
@@ -290,7 +301,7 @@ nav .content .links{
     color: black;
    /* z-index: -5;*/
     /*z-index: -60;*/
-    padding: 0 20px;
+    padding: 20px;
     text-align: center;
     transform: translate(-50%, -50%);
 }
@@ -303,6 +314,37 @@ nav .content .links{
 {
     font-size: 20px;
     margin: 5px 0;
+}
+
+.list-options {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+    font-size: 18px;
+}
+.list-options li {
+    padding: 10px 0;
+    position: relative;
+    left: 1.5em;
+    margin-bottom: 0.75em;
+    padding-left: 1em;
+    background: #E3DEDC;
+}
+.list-options li:before {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.5em;
+    width: 1.875em;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: black;
+    border-bottom-left-radius: 70em;
+    border-top-left-radius: 70em;
+    counter-increment: li;
+    content: counter(li);
 }
 
 /* buttons */
@@ -407,17 +449,26 @@ nav .content .links{
     margin-top: calc(100% - 600px);
 }
 
-.box-container {/*
-    margin-top: 10px;*/
+.box-container {
+
     width: 100%;
     display: flex;
     margin: 0 20px;
+    padding-top: 15%;
+    flex-wrap: wrap;
+   /* border: 20px red solid;*/
 
+    flex-direction: column;
+
+    justify-content: space-around;
     /*
     height: 500px;*/
 
 }
 .box-wrap {
+
+    /*border: 20px solid green;*/
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -425,12 +476,15 @@ nav .content .links{
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+
+    justify-content: space-between;
+
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
+
     -ms-flex-direction: row;
     flex-direction: row;
 }
@@ -440,23 +494,8 @@ nav .content .links{
     align-items: center;
     margin: 0 auto;
     text-align: center;
+    width: auto;
 
-  /*  z-index: -5;*/
-
-    width: 100%;/*
-    resize: vertical;*/
-   /* width: 100%;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-
-    max-width: 1100px;
-
-    text-align: center;*/
-    /*padding: 30px;*/
 }
 .cards h2.header{
     font-size: 40px;
@@ -523,7 +562,6 @@ nav .content .links{
 .cardsContent p{
     font-size: 17px;
     font-family: inherit;
-   /* font-family: 'Poppins',sans-serif;*/
 }
 .cardsContent a{
     margin: 22px 0;
@@ -638,7 +676,7 @@ section {
     justify-content: center;
     align-items: center;
    /* color: white;*/
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 
 .section-dark{
@@ -657,18 +695,21 @@ section {
 }
 
 .main-content-page {
-    max-width: 1170px;
+    /*max-width: 1170px;*/
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
-
+   /* border: solid 20px purple;*/
 }
 
 .section-items
 {
+   /* border: 20px solid yellow;*/
     justify-items: center;
     align-content: space-between;
+    justify-content: space-between;
 }
 
 @media (min-width: 1170px) {
