@@ -90,7 +90,7 @@ function buttonSendText(sampleText) {
     $("#chatbox").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
-    //Uncomment this if you want the bot to respond to this buttonSendText event
+    //Отмените это, если вы хотите, чтобы бот реагировал на событие buttonSendText
     // setTimeout(() => {
     //     getHardResponse(sampleText);
     // }, 1000)
@@ -99,12 +99,6 @@ function buttonSendText(sampleText) {
 function sendButton() {
     getResponse();
 }
-
-/*
-function heartButton() {
-    buttonSendText("Heart clicked!")
-}
-*/
 
 //  Обработка enter, для отправики сообщения
 $("#textInput").keypress(function (e) {

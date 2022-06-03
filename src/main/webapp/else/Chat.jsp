@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="../css/chat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 
-<%@include file="upperMenu.jsp"%>
+<%@include file="../upperMenu.jsp"%>
 
 <div class="chat-bar-collapsible">
     <button id="chat-button" type="button" class="chat-main-folder">Чат
@@ -62,7 +62,7 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="scripts/responses.js"></script>
-<script src="scripts/chat.js"></script>
+<script src="../scripts/responses.js"></script>
+<script src="../scripts/chat.js"></script>
 
 </html>

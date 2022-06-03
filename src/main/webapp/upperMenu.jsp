@@ -19,7 +19,8 @@
             <%--<li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
             <li><a href="show-study-areas">Направления подготовки</a></li>
             <li><a href="show-specialities">Специальности</a></li>
-              <li><a href="show-specialities">Специальности 2</a></li>
+              <li><a href="show-profiles">Профили</a></li>
+             <%-- <li><a href="show-specialities">Специальности 2</a></li>--%>
           </ul>
         </li>
         <li>
@@ -55,10 +56,10 @@
       { out.print(" <label for=\"show-search\" class=\"search-icon\"><i class=\"fas fa-search\">"+ loggedUser.getName() + "</i></label>");
         }
     %>--%>
-    <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+    <%--<label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
     <form action="#" class="search-box">
       <input type="text" placeholder="Начните ввод..." required>
       <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-    </form>
+    </form>--%>
   </nav>
 </div>

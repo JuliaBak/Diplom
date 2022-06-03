@@ -1,10 +1,12 @@
 <%@ page import="com.diplomlate.diplomlate.tasks.SpecialitiesTasks" %>
 <%@ page import="com.diplomlate.diplomlate.entities.Speciality" %>
+<%@ page import="com.diplomlate.diplomlate.tasks.SpProfilesTasks" %>
+<%@ page import="com.diplomlate.diplomlate.entities.SpProfile" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Specialities</title>
+    <title>Profiles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
@@ -24,25 +26,34 @@
 
 <div>
     <br>
-        <div class="box-container">
-            <%--<div class="skip_element">--%>
-            <div class="table-container">
+    <div class="box-container">
+        <div class="box-wrap">
+        <%--<div class="skip_element">--%>
+        <div class="table-container">
+            <%
+                out.print("<div class=\"main-text\"><center><h2>Профили:</h2></center></div>");
+            %>
+            <br/>
+            <br/>
+            <div>
                 <%
-                    out.print("<div class=\"main-text\"><center><h2>Специальности:</h2></center></div>");
                     out.print("<div><table class=\"first-table\">");
-                    out.print("<tr> " + "<th>Название</th>" + "<th>Номер</th>" + "<th>Описание</th>" +
+                    out.print("<tr> " + "<th>Название</th>" + "<th>Описание</th>" +
                             "</tr>");
-                    for (Speciality spec : SpecialitiesTasks.specialities) {
 
-                        out.print("<tr><td><a href=\"spec-info" + "?" + spec.getSpec_id()  + "\">" + spec.getSpec_name() +  "</a></td>");
-                        out.print("<td><a href=\"spec-info" + "?" + spec.getSpec_id()  + "\">" + spec.getSpec_number() + "</a></td>");
-                        out.print("<td><a href=\"spec-info" + "?" + spec.getSpec_id()  + "\">" + spec.getSpec_description() + "</a></td></tr>");
+
+                    for (SpProfile profile : SpProfilesTasks.spProfiles) {
+
+                        out.print("<tr><td><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_name() + "</a></td>");
+                        out.print("<td><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_description() + "</a></td></tr>");
 
                     }
                     out.println("</table></div>");
                 %>
             </div>
+            </div>
         </div>
+    </div>
 </div>
 
 <%@include file="chatBot.jsp" %>

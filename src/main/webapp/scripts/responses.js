@@ -10,19 +10,27 @@ function getBotResponse(input) {
     var userFunctionAsks = ['Что ты умеешь?', 'Какой твой функционал?', 'Каков твой фнкционал?', 'Какие функции ты имеешь?',
     'Что ты можешь?', 'Что ты умеешь', 'что ты умеешь', 'что ты умеешь?'];
 
-    var mainFunctionsBot = "Я могу рассказать о наших направленяих подготовки! Для этого скажи мне \"Направления\". \n" +
+    var studyAreasAsk = ['Где направления', 'где направления', "где направления?", "Где направления?"];
+    var studyAreaLink = "Ты можешь найти направления через вверхнее меню в разделе \'Учеба\'!";
+
+    var specialitiesAsk = ['Где специальности', 'где специальности', "где специальности?", "Где специальности?"];
+    var specialitiesLink = "Специальности можно найти на главной странице в разделе \'Учеба\'! Или в \'Учеба\'\-\>" +
+        "\'Направления\' и здесь, перейдя по нужному тебе направлению, сможешь увидеть все специальнсти, относящиеся в данному направлению!";
+
+    var profilesAsk = ['Где профили', 'где профили', "где профили?", "Где профили?"];
+    var profilesLink = "Профили находятся на главной странице в разделе \'Учеба\'! Также их можно найти в \'Учеба\'\-\>" +
+        "\'Профили\'!";
+
+    var nameAks = ['Как тебя зовут', 'как тебя зовут', 'как тебя зовут?', 'Как тебя зовут?', 'как твое имя', 'как твое имя?',
+    'Как твое имя', 'Как твое имя?'];
+    var nameReply = ['Диппи!', 'Меня зовут Диппи!', 'Мое имя Диппи'];
+
+    var mainFunctionsBot2 = "Я могу рассказать о наших направленяих подготовки! Для этого скажи мне \"Направления\". \n" +
         "Еще я могу рассказать о наших специальностях! Скажи мне \"Специальности\"\n";
 
-    //Камень ножницы бумага
-    if (input == "Камень") {
-        return "Бумага";
-    } else if (input == "Бумага") {
-        return "Ножницы";
-    } else if (input == "Ножницы") {
-        return "Камень";
-    }
+    var mainFunctionsBot = "Я могу подсказать, где находится то, что ты ищещь! Просто спроси меня \"Где направления\" или \"Где специальности\"";
 
-    // Simple responses
+    //Ответы
     /*if (input == "Привет" || input == "Здравствуй")*/
     if(checkAvailability(userHelloLines,input) || checkAvailability(helloLines,input)){
         ranAnswer = RandArray(helloLines);
@@ -32,6 +40,18 @@ function getBotResponse(input) {
         return ranAnswer+"!";
     } else if (checkAvailability(userFunctionAsks,input)) {
         ranAnswer = mainFunctionsBot;
+        return ranAnswer; }
+    else if (checkAvailability(studyAreasAsk,input)) {
+        ranAnswer = studyAreaLink;
+        return ranAnswer; }
+    else if (checkAvailability(specialitiesAsk,input)) {
+            ranAnswer = specialitiesLink;
+        return ranAnswer; }
+    else if (checkAvailability(profilesAsk,input)) {
+        ranAnswer = profilesLink;
+        return ranAnswer; }
+    else if (checkAvailability(nameAks,input)) {
+        ranAnswer = RandArray(nameReply);
         return ranAnswer; }
     else {
         return "Прости, я не знаю ответа...";
@@ -53,3 +73,22 @@ function matchPattern(msq)
     const helloPat = /^([пП]ривет[-.?!)(,:]*\s*|[Зз]дравствуй(те)*[-.?!)(,:]*\s*$)/;
     return helloPat.test(msg);
 }
+/*
+
+function findStudyAreas()
+{
+    var studyAreasFound;
+    var mode = 1;
+    $.ajax(
+        {
+            type:'POST',
+            data: {mode:mode},
+            url:'username-validation',
+            success: function (result){
+               /!* $('#result').html(result);*!/
+
+            }
+        }
+    )
+
+}*/

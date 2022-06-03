@@ -1,5 +1,6 @@
 package com.diplomlate.diplomlate.servlets;
 
+import com.diplomlate.diplomlate.entities.SpProfile;
 import com.diplomlate.diplomlate.tasks.SpecialitiesTasks;
 import com.diplomlate.diplomlate.entities.Speciality;
 
@@ -14,40 +15,40 @@ import java.util.List;
 public class ShowSpecialitiesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SpecialitiesTasks dao = new SpecialitiesTasks();
-        String result = dao.ShowAllSpecialities();
 
-        if (result.equals("Success")) {
-            List<Speciality> allSpec = new ArrayList<Speciality>(SpecialitiesTasks.specialities);
+            SpecialitiesTasks dao = new SpecialitiesTasks();
+            String result = dao.ShowAllSpecialities();
 
-            for (Speciality spec : allSpec) {
+            if (result.equals("Success")) {
+                List<Speciality> allSpec = new ArrayList<Speciality>(SpecialitiesTasks.specialities);
 
-                String spec_name = spec.getSpec_name();
-                request.setAttribute("spec_name",spec_name);
+                for (Speciality spec : allSpec) {
 
-                String spec_number = spec.getSpec_number();
-                request.setAttribute("spec_number",spec_number);
+                    String spec_name = spec.getSpec_name();
+                    request.setAttribute("spec_name", spec_name);
 
-                String spec_description = spec.getSpec_description();
-                request.setAttribute("spec_description",spec_description);
+                    String spec_number = spec.getSpec_number();
+                    request.setAttribute("spec_number", spec_number);
 
-                int spec_id = spec.getSpec_id();
-                request.setAttribute("spec_id",spec_id);
+                    String spec_description = spec.getSpec_description();
+                    request.setAttribute("spec_description", spec_description);
 
-            }
+                    int spec_id = spec.getSpec_id();
+                    request.setAttribute("spec_id", spec_id);
 
-            request.setAttribute("specialities",SpecialitiesTasks.specialities);
+                }
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Specialities.jsp");
-            dispatcher.forward(request, response);
-        }
-        else {
+                request.setAttribute("specialities", SpecialitiesTasks.specialities);
 
-            System.out.println("ERROR");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Specialities.jsp");
+                dispatcher.forward(request, response);
+            } else {
+
+                System.out.println("ERROR");
 
            /* RequestDispatcher req = request.getRequestDispatcher("login/add.jsp");
             req.include(request, response);*/
-        }
+            }
     }
 
     @Override

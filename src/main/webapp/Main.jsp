@@ -64,8 +64,18 @@
         <%-- <div class="section-items">--%>
         <div class="box-container">
             <div class="box-wrap">
-                <div class="main-text-2">
+                <div class="main-text-2" style="width: 100%">
                     <h2 style="color: black; text-shadow: 0 0 10px white; ">Все об обучении</h2>
+                    <br/>
+                        <form class="forms" action="show-study-areas" method="get">
+                            <input type="submit" value="Направления подготовки" />
+                        </form>
+                    <form class="forms" action="show-specialities" method="get">
+                        <input type="submit" value="Специальности" />
+                    </form>
+                    <form class="forms" action="show-profiles" method="get">
+                        <input type="submit" value="Профили" />
+                    </form>
                 </div>
             </div>
         </div>
