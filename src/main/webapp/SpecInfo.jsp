@@ -23,42 +23,56 @@
 <div class="bg bg3"></div>
 
 <%--<section>--%>
-<div class="main-content-page" style="width: 80%; top: 30%; bottom: 40%">
-    <div class="section-items">
-            <div class="main-text" style="width: 80%">
-                <%
-                    out.print(" <h2>" + SpecialitiesTasks.searchedSpec.getSpec_name() + "</h2>");
-                    out.print("<br/>");
-                    out.print(" <h3>" + SpecialitiesTasks.searchedSpec.getSpec_description() + "</h3>");
-                %>
-            </div>
 
-            <div style="padding: 10%"></div>
+<section class="section-white" style="margin: auto">
+    <div class="box-container-1">
+        <div class="box-container-1">
+            <div class="box-container-2" style="width: 100%">
+                <div class="box-wrap-1">
 
-            <div class="box-container">
-                <div class="box-wrap">
-                    <div class="cards">
-                        <h2 class="header">
-                            Профили
-                        </h2>
-                        <%
-                            for (SpProfile spProfile : SpProfilesTasks.searchedAllSpProfiles) {
-                                out.print(" <div class=\"cardsContent card-3\">");
-                                out.print(" <div class=\"fab\"></div>");
-                                out.print("<h2>" + spProfile.getSp_prof_name() + "</h2>");
-                                out.print("<p>" + spProfile.getSp_prof_description() + "</p>");
-                                out.print("<a href=\"sp_prof_info" + "?" + spProfile.getSp_prof_id() + "\">Узнать больше</a>");
-                                out.print("</div>");
-
-                            }
-                        %>
-
+                    <div class="box-container-1">
+                        <div class="outer">
+                            <div id="spec-info-name">
+                                <div class="main-text-a">
+                                    <%
+                                        out.print(" <h2>" + SpecialitiesTasks.searchedSpec.getSpec_name() + "</h2>");
+                                        out.print("<br/>");
+                                        out.print(" <h3>" + SpecialitiesTasks.searchedSpec.getSpec_description() + "</h3>");
+                                    %>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
+                    <div id="spec-info-profiles">
+                        <div class="box-container-1">
+                            <div class="outer">
+                                <div class="cards" style="margin: 0">
+                                    <h2 class="header">
+                                        Профили специальности
+                                    </h2>
+                                    <%
+                                        for (SpProfile spProfile : SpProfilesTasks.searchedAllSpProfiles) {
+                                            out.print(" <div class=\"cardsContent card-3\">");
+                                            out.print(" <div class=\"fab\"></div>");
+                                            out.print("<h2>" + spProfile.getSp_prof_name() + "</h2>");
+                                            out.print("<p>" + spProfile.getSp_prof_description() + "</p>");
+                                            out.print("<a href=\"sp_prof_info" + "?" + spProfile.getSp_prof_id() + "\">Узнать больше</a>");
+                                            out.print("</div>");
+
+                                        }
+                                    %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <%--</section>--%>
 

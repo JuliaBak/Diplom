@@ -571,7 +571,7 @@ nav .content .links{
 }
 
 .cards{
-    padding: 0 20px;
+   /* padding: 0 20px;*/
     align-items: center;
     margin: 0 auto;
     text-align: center;
@@ -747,6 +747,8 @@ section {
 .section-white{
     background: white;
     height: auto;
+    padding: 5%;
+    width: 80%;
 }
 
 .items-container{

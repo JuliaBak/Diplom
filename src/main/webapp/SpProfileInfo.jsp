@@ -36,11 +36,11 @@
 <%--<section>
     <div>--%>
 <%--<section style="height: auto">--%>
-<section class="section-white" style="width: 80%; margin: auto;">
+<section class="section-white" style="margin: auto;">
     <div class="box-container-1">
         <div class="box-container-1">
-            <div class="box-container-2">
-                <div class="box-wrap-1">
+            <div class="box-container-2" style="width: 90%">
+                <div class="box-wrap-1" style="flex-direction: column">
 
                     <div class="box-container-1">
                         <div class="outer">
@@ -84,32 +84,33 @@
 
                             </div>
                         </div>
+                    </div>
 
-                        <div id="jobs">
-                            <div class="box-container-1">
-                                <div class="outer">
-                                    <div class="main-text-a">
-                                        <h2>Кем вы можете стать и чем заниматься...</h2>
-                                    </div>
+                    <div id="jobs">
+                        <div class="box-container-1">
+                            <div class="outer">
+                                <div class="main-text-a">
+                                    <h2>Кем вы можете стать и чем заниматься...</h2>
                                 </div>
                             </div>
-                            <div class="box-container-1">
-                                <div class="outer">
-                                    <%
-                                        out.print("<br/>");
-
-                                        out.print("<ol class=\"list-options\">");
-                                        for (Job job : SpProfilesTasks.jobs) {
-                                            out.print("<li>" + job.getJob_name() + "</li>");
-                                        }
-                                        out.print("</ol>");
-                                    %>
-                                </div>
-                            </div>
-
                         </div>
+                        <div class="box-container-1">
+                            <div class="outer">
+                                <%
+                                    out.print("<br/>");
+
+                                    out.print("<ol class=\"list-options\">");
+                                    for (Job job : SpProfilesTasks.jobs) {
+                                        out.print("<li>" + job.getJob_name() + "</li>");
+                                    }
+                                    out.print("</ol>");
+                                %>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

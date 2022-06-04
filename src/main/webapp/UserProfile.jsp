@@ -17,7 +17,7 @@
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
 
-<section class="section-white" style="width: 80%; margin: auto; text-align: center">
+<section class="section-white" style="margin: auto; text-align: center">
     <div class="box-container-1">
         <div class="box-container-1">
             <div class="box-container-2">

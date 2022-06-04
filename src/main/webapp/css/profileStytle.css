@@ -72,7 +72,7 @@
     -webkit-box-direction: normal;
 
     -ms-flex-direction: row;
-    flex-direction: row;
+   /* flex-direction: column;*/
 }
 
 .main-text-a{
