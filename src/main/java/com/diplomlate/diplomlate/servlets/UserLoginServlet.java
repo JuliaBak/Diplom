@@ -20,12 +20,6 @@ public class UserLoginServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-
-        //TODO: сделаьт выход из профиля и очиение loggedUser при этом
-        loggedUser.setPassword("");
-        loggedUser.setName("");
-        loggedUser.setEmail("");
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -40,8 +34,7 @@ public class UserLoginServlet extends HttpServlet {
         {
             response.setContentType("text/html; charset=utf-8");
             PrintWriter out = response.getWriter();
-
-                out.println("Неверно введены данные!");
+            out.println("Неверно введены данные!");
 
             RequestDispatcher req = request.getRequestDispatcher("Login.jsp");
             req.include(request, response);
@@ -53,8 +46,7 @@ public class UserLoginServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("");
 
-            loggedUser.setName(username);
-            loggedUser.setPassword(password);
+            dao.setLoggedUser(user);
 
             request.setAttribute("usernameLogin", username);
             request.setAttribute("passwordLogin", password);

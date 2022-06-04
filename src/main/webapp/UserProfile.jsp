@@ -17,26 +17,59 @@
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
 
-<section class="section-white" style="width: 80%; margin: auto;">
-<div class="box-container-1">
+<section class="section-white" style="width: 80%; margin: auto; text-align: center">
     <div class="box-container-1">
-        <div class="box-container-2">
-            <div class="box-wrap-1">
-                <div class="box-container-1">
-                    <div class="outer">
-                        <div class="main-text-a">
-                            <h2>Приветствую
-                                <%
-                                    out.print(loggedUser.getName());
-                                %>
-                                !</h2>
+        <div class="box-container-1">
+            <div class="box-container-2">
+                <div class="box-wrap-1">
+
+                    <div class="box-container-1">
+                        <div class="outer">
+                            <div class="main-text-a">
+                                <h2>Профиль пользователя</h2>
+                                <h3>Привет,
+                                    <%
+                                        out.print(loggedUser.getName());
+                                    %>
+                                    !</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-container-1">
+                        <div class="outer">
+                            <div class="data-input-user">
+                                <form <%--action="user_login_success"--%> <%--method="post"--%> class="forms-user">
+                                    <div>
+                                        <label class="labels-user" for="newUsername">Имя</label>
+                                        <input type="text" class="data_input" name="username" id="newUsername"
+                                               value="<% out.print(loggedUser.getName()); %>"
+                                               placeholder="Новое имя"/>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <label class="labels-user" for="newPass">Пароль</label>
+                                        <input type="password" class="data_input" name="password" id="newPass"
+                                               placeholder="Новый пароль"
+                                               value="<% out.print(loggedUser.getPassword());%>"/>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <label class="labels-user" for="newEmail">Email</label>
+                                        <input type="email" class="data_input" name="email" id="newEmail"
+                                               value="<% out.print(loggedUser.getEmail());%>"
+                                               placeholder="Новое имя"/>
+                                    </div>
+                                    <br/>
+                                    <input type="submit" id="saveData" value="Сохранить"/>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

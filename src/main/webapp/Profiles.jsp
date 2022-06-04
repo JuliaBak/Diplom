@@ -30,10 +30,7 @@
         <div class="box-container-1">
             <div class="box-container-2">
                 <div class="box-wrap-1">
-                    <%-- <div class="box-container">
-                         <div class="box-wrap">--%>
-                    <%--<div class="skip_element">--%>
-                    <%-- <div class="table-container">--%>
+
                     <div class="box-container-1">
                         <div class="outer">
                             <div class="main-text-a">
@@ -43,24 +40,23 @@
                     </div>
                     <br/>
                     <br/>
-                    <%--  <div style="padding-top: 100px;">--%>
                     <div class="box-container-1">
                         <div class="outer">
                             <div class="table-container-a">
-                            <%
-                                out.print("<div><table class=\"first-table\">");
-                                out.print("<tr> " + "<th>Название</th>" + "<th>Описание</th>" +
-                                        "</tr>");
+                                <%
+                                    out.print("<div><table class=\"first-table\">");
+                                    out.print("<tr> " + "<th>Название</th>" + "<th>Описание</th>" +
+                                            "</tr>");
 
-                                for (SpProfile profile : SpProfilesTasks.spProfiles) {
+                                    for (SpProfile profile : SpProfilesTasks.spProfiles) {
 
-                                    out.print("<tr><td><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_name() + "</a></td>");
-                                    out.print("<td background: white><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_description() + "</a></td></tr>");
+                                        out.print("<tr><td style=\"background: #57B3FF\"><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_name() + "</a></td>");
+                                        out.print("<td style=\"background: white\"><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_description() + "</a></td></tr>");
 
-                                }
-                                out.println("</table></div>");
-                            %>
-                        </div>
+                                    }
+                                    out.println("</table></div>");
+                                %>
+                            </div>
                         </div>
                     </div>
                     <%-- </div>--%>

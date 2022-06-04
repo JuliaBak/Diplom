@@ -1,6 +1,8 @@
 package com.diplomlate.diplomlate.servlets;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
+import com.diplomlate.diplomlate.entities.User;
+import com.diplomlate.diplomlate.tasks.Login;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -62,13 +64,13 @@ public class UserNameCheckServlet extends HttpServlet {
                 throw new RuntimeException(e);
             }
         }
-        else {
+        else if(Objects.equals(mode, "2")){
              password = request.getParameter("password");
             isRightPass = Pattern.matches(passPattern, password);
             if(!isRightPass && !password.isEmpty()){
                 response.setContentType("text/html; charset=utf-8");
                 PrintWriter out = response.getWriter();
-                out.println("Пароль должен содержать от 4 до 10 символов");
+                out.println("Пароль должен содержать от 4 до 10 символов и состоять из букв и/или цифр");
             }
             else {
                 response.setContentType("text/html");
@@ -76,33 +78,36 @@ public class UserNameCheckServlet extends HttpServlet {
                 out.println("");
             }
         }
+       /* else if(Objects.equals(mode, "3")){
+            String passLog = request.getParameter("passwordLog");
+           String usernameLog = request.getParameter("usernameLog");
 
-      /*  try {
-            con = DBConnection.getConnection();
-            sqlName = con.prepareStatement("SELECT * FROM users WHERE user_name=?");
-            sqlName.setString(1, username);
-            rs = sqlName.executeQuery();
+            User user = new User();
+            Login dao = new Login();
 
-            isRightPass = Pattern.matches(passPattern, password);
-            if(rs.next())
-            {
+            user.setName(usernameLog);
+            user.setPassword(passLog);
+
+            if(!dao.validateUser(user) || usernameLog.isEmpty() || passLog.isEmpty()){
                 response.setContentType("text/html; charset=utf-8");
                 PrintWriter out = response.getWriter();
-                out.println("Пользователь с таким именем уже существует");
-            }
-            else if(!isRightPass){
-                response.setContentType("text/html; charset=utf-8");
-                PrintWriter out = response.getWriter();
-                out.println("Пароль должен содержать от 4 до 10 символов");
+                out.println("Wrong Data");
             }
             else {
-            response.setContentType("text/html");
-            PrintWriter out = response.getWriter();
-            out.println("");
+                response.setContentType("text/html; charset=utf-8");
+                PrintWriter out = response.getWriter();
+                out.println("");
+
+                dao.setLoggedUser(user);
+
+                request.setAttribute("usernameLogin", usernameLog);
+                request.setAttribute("passwordLogin", passLog);
+
+                RequestDispatcher req = request.getRequestDispatcher("Main.jsp");
+                req.forward(request, response);
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }*/
+
     }
 
 }
