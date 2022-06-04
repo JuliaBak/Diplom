@@ -43,25 +43,31 @@ public class UserNameCheckServlet extends HttpServlet {
         if(Objects.equals(mode, "1"))
         {
             username = request.getParameter("username");
-            try {
-                con = DBConnection.getConnection();
-                sqlName = con.prepareStatement("SELECT * FROM users WHERE user_name=?");
-                sqlName.setString(1, username);
-                rs = sqlName.executeQuery();
 
-                if(rs.next())
-                {
-                    response.setContentType("text/html; charset=utf-8");
-                    PrintWriter out = response.getWriter();
-                    out.println("Пользователь с таким именем уже существует");
+            if(username.isEmpty() || username.equals(" "))
+            {
+                response.setContentType("text/html; charset=utf-8");
+                PrintWriter out = response.getWriter();
+                out.println("Имя не может быть пустым");
+            }else {
+                try {
+                    con = DBConnection.getConnection();
+                    sqlName = con.prepareStatement("SELECT * FROM users WHERE user_name=?");
+                    sqlName.setString(1, username);
+                    rs = sqlName.executeQuery();
+
+                    if (rs.next()) {
+                        response.setContentType("text/html; charset=utf-8");
+                        PrintWriter out = response.getWriter();
+                        out.println("Пользователь с таким именем уже существует");
+                    } else {
+                        response.setContentType("text/html");
+                        PrintWriter out = response.getWriter();
+                        out.println("");
+                    }
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
                 }
-                else {
-                    response.setContentType("text/html");
-                    PrintWriter out = response.getWriter();
-                    out.println("");
-                }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
             }
         }
         else if(Objects.equals(mode, "2")){

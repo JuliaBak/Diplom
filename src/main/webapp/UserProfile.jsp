@@ -32,6 +32,8 @@
                                         out.print(loggedUser.getName());
                                     %>
                                     !</h3>
+<%--                                <h3 style="color: red; font-size: 18px" id="changeResult"></h3>--%>
+                               <%-- <span style="color: red; font-size: 18px" id="changeResult"></span>--%>
                             </div>
                         </div>
                     </div>
@@ -71,6 +73,25 @@
         </div>
     </div>
 </section>
+
+<%--<script>
+    $(document).ready(function () {
+        $('#newUsername').change(function () {
+            var usernameNew = $('#newUsername').val();
+            var mode = 1;
+            $.ajax(
+                {
+                    type: 'POST',
+                    data: {username: usernameNew, mode: mode},
+                    url: 'username-validation',
+                    success: function (result) {
+                        $('#changeResult').html(result);
+                    }
+                }
+            )
+        });
+    });
+</script>--%>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="scripts/responses.js"></script>

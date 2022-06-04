@@ -13,6 +13,7 @@ import static com.diplomlate.diplomlate.entities.User.loggedUser;
 
 public class Login {
     String sql="SELECT * FROM users WHERE user_name=? AND user_password=?";
+    String updateSql = "UPDATE `users` SET `user_name` = '?', `user_email` = '?', `user_password` = '?' WHERE `users`.`user_id` = ?";
 
     public boolean validateUser(User user)
     {
@@ -36,6 +37,7 @@ public class Login {
         loggedUser.setPassword("");
         loggedUser.setName("");
         loggedUser.setEmail("");
+        loggedUser.setUser_id(1);
 
         Connection con = DBConnection.getConnection();
 
@@ -53,6 +55,7 @@ public class Login {
                 User logUser = new User();
                 logUser.setName(rs.getString("user_name"));
                 logUser.setPassword(rs.getString("user_password"));
+                logUser.setUser_id(rs.getInt("user_id"));
 
                 String email = rs.getString("user_email");
                 if(!email.isEmpty() || email == null) {
@@ -65,6 +68,7 @@ public class Login {
                 loggedUser = logUser;
             }
 
+            System.out.println(loggedUser.getUser_id());
 //            result = rs.next();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
