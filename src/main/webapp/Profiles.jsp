@@ -45,7 +45,7 @@
                             <div class="table-container-a">
                                 <%
                                     out.print("<div><table class=\"first-table\">");
-                                    out.print("<tr> " + "<th>Название</th>" + "<th>Описание</th>" +
+                                    out.print("<tr> " + "<th style=\"background: #57B3FF\">Название</th>" + "<th style=\"background: white\">Описание</th>" +
                                             "</tr>");
 
                                     for (SpProfile profile : SpProfilesTasks.spProfiles) {

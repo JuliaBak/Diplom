@@ -78,9 +78,9 @@ public class UserNameCheckServlet extends HttpServlet {
                 out.println("");
             }
         }
-       /* else if(Objects.equals(mode, "3")){
-            String passLog = request.getParameter("passwordLog");
-           String usernameLog = request.getParameter("usernameLog");
+        else if(Objects.equals(mode, "3")){
+            String passLog = request.getParameter("password");
+           String usernameLog = request.getParameter("username");
 
             User user = new User();
             Login dao = new Login();
@@ -106,7 +106,7 @@ public class UserNameCheckServlet extends HttpServlet {
                 RequestDispatcher req = request.getRequestDispatcher("Main.jsp");
                 req.forward(request, response);
             }
-        }*/
+        }
 
     }
 

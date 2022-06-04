@@ -746,6 +746,7 @@ section {
 
 .section-white{
     background: white;
+    height: auto;
 }
 
 .items-container{

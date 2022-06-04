@@ -24,8 +24,52 @@
 
 <div>
     <br>
+    <div class="box-container-1">
+        <div class="box-container-1">
+            <div class="box-container-2">
+                <div class="box-wrap-1">
+
+                    <div class="box-container-1">
+                        <div class="outer">
+                            <div class="main-text-a">
+                                <h2>Специальности:</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="box-container-1">
+                        <div class="outer">
+                            <div class="table-container-a">
+                                <%
+                                  /*  out.print("<div class=\"main-text\"><center><h2>Специальности:</h2></center></div>");*/
+                                    out.print("<div><table class=\"first-table\">");
+                                    out.print("<tr> " + "<th>Название</th>" + "<th>Номер</th>" + "<th>Описание</th>" +
+                                            "</tr>");
+                                    for (Speciality spec : SpecialitiesTasks.specialities) {
+
+                                        out.print("<tr><td><a href=\"spec-info" + "?" + spec.getSpec_id()  + "\">" + spec.getSpec_name() +  "</a></td>");
+                                        out.print("<td><a href=\"spec-info" + "?" + spec.getSpec_id()  + "\">" + spec.getSpec_number() + "</a></td>");
+                                        out.print("<td><a href=\"spec-info" + "?" + spec.getSpec_id()  + "\">" + spec.getSpec_description() + "</a></td></tr>");
+
+                                    }
+                                    out.println("</table></div>");
+                                %>
+                            </div>
+                        </div>
+                    </div>
+                    <%-- </div>--%>
+                </div>
+                <%-- </div>--%>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%--<div>
+    <br>
         <div class="box-container">
-            <%--<div class="skip_element">--%>
+            &lt;%&ndash;<div class="skip_element">&ndash;%&gt;
             <div class="table-container">
                 <%
                     out.print("<div class=\"main-text\"><center><h2>Специальности:</h2></center></div>");
@@ -43,7 +87,7 @@
                 %>
             </div>
         </div>
-</div>
+</div>--%>
 
 <%@include file="chatBot.jsp" %>
 
