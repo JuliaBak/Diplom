@@ -84,9 +84,9 @@ public class UserNameCheckServlet extends HttpServlet {
                 out.println("");
             }
         }
-        else if(Objects.equals(mode, "3")){
-            String passLog = request.getParameter("password");
-           String usernameLog = request.getParameter("username");
+      /*  else if(Objects.equals(mode, "3")){
+            String passLog = request.getParameter("passwordLog");
+           String usernameLog = request.getParameter("usernameLog");
 
             User user = new User();
             Login dao = new Login();
@@ -97,7 +97,7 @@ public class UserNameCheckServlet extends HttpServlet {
             if(!dao.validateUser(user) || usernameLog.isEmpty() || passLog.isEmpty()){
                 response.setContentType("text/html; charset=utf-8");
                 PrintWriter out = response.getWriter();
-                out.println("Wrong Data");
+                out.println("Неверно введены данные");
             }
             else {
                 response.setContentType("text/html; charset=utf-8");
@@ -112,7 +112,7 @@ public class UserNameCheckServlet extends HttpServlet {
                 RequestDispatcher req = request.getRequestDispatcher("Main.jsp");
                 req.forward(request, response);
             }
-        }
+        }*/
 
     }
 

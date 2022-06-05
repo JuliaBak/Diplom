@@ -4,7 +4,6 @@
 <head>
     <title>Login Diplom</title>
 
-    <%--  pageEncoding="UTF-8"--%>
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +57,7 @@
     </div>
 </section>
 
-<%--<script>
+<script>
     $(document).ready(function () {
         $('#loginButton').onclick(function () {
             var username = $('#username').val();
@@ -75,9 +74,9 @@
             )
         });
     });
-</script>--%>
+</script>
 
-<script>
+<%--<script>
     $(document).ready(function () {
         $('#loginButton').onclick(function () {
             var username = $('#username').val();
@@ -95,7 +94,7 @@
             )
         });
     });
-</script>
+</script>--%>
 
 </body>
 </html>

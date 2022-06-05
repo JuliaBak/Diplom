@@ -13,7 +13,7 @@ import static com.diplomlate.diplomlate.entities.User.loggedUser;
 
 public class Login {
     String sql="SELECT * FROM users WHERE user_name=? AND user_password=?";
-    String updateSql = "UPDATE `users` SET `user_name` = '?', `user_email` = '?', `user_password` = '?' WHERE `users`.`user_id` = ?";
+    String updateSql = "UPDATE users SET user_name=?, user_email=?, user_password=? WHERE user_id=?";
 
     public boolean validateUser(User user)
     {
@@ -68,7 +68,6 @@ public class Login {
                 loggedUser = logUser;
             }
 
-            System.out.println(loggedUser.getUser_id());
 //            result = rs.next();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -79,6 +78,40 @@ public class Login {
         } else {
             return "Error!!";
         }*/
+
+    }
+
+    public String updateUser(User user, int logged_user_id)
+    {
+        Connection con = DBConnection.getConnection();
+
+        int i = 0;
+        try {
+            PreparedStatement ps= con.prepareStatement(updateSql);
+
+            ps.setString(1, user.getName());
+            ps.setString(2, user.getEmail());
+            ps.setString(3, user.getPassword());
+            ps.setInt(4, logged_user_id);
+
+            int rs = ps.executeUpdate();
+
+            if (rs !=0 ) {
+
+                loggedUser = user;
+                loggedUser.setUser_id(logged_user_id);
+                i++;
+            }
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        if ((i != 0)) {
+            return "Success";
+        } else {
+            return "Error!!";
+        }
 
     }
 }

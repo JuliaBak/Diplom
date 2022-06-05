@@ -65,8 +65,7 @@
                                                                    id="email"
                                                                    placeholder="youremail@gmail.com"><br/>
                         </div>
-                        <input type="submit"
-                               value="Подтвердить" <%--class="forms-buttons"--%>><%--Подтвердить--%></input>
+                        <input type="submit" value="Подтвердить">
                     </form>
                 </div>
             </div>
