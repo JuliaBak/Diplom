@@ -38,6 +38,10 @@
                                         out.print(" <h2>" + SpecialitiesTasks.searchedSpec.getSpec_name() + "</h2>");
                                         out.print("<br/>");
                                         out.print(" <h3>" + SpecialitiesTasks.searchedSpec.getSpec_description() + "</h3>");
+                                        out.print("<br/>");
+                                        out.print(" <h3>Номер специальности</h3>");
+                                        out.print("<br/>");
+                                        out.print(" <h3>" + SpecialitiesTasks.searchedSpec.getSpec_number() + "</h3>");
                                     %>
                                 </div>
                             </div>

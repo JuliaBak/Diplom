@@ -23,7 +23,7 @@
              <%-- <li><a href="show-specialities">Специальности 2</a></li>--%>
           </ul>
         </li>
-        <li>
+     <%--   <li>
           <a class="desktop-link">Тестирование</a>
           <input type="checkbox" id="show-services">
           <label for="show-services">Тестирование</label>
@@ -41,7 +41,7 @@
                  </ul>
              </li>-->
           </ul>
-        </li>
+        </li>--%>
         <%--  <li><a href="Chat.jsp">Обратная связь/Мессенджер</a></li>     --%>
         <li><a href="${pageContext.request.contextPath}/start">Выйти</a></li>
         <%

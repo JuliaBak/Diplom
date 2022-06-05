@@ -24,8 +24,7 @@
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
 
-<div>
-    <br>
+<section class="section-white" style="margin: auto;">
     <div class="box-container-1">
         <div class="box-container-1">
             <div class="box-container-2">
@@ -40,7 +39,7 @@
                     </div>
                     <br/>
                     <br/>
-                    <div class="box-container-1">
+                   <%-- <div class="box-container-1">
                         <div class="outer">
                             <div class="table-container-a">
                                 <%
@@ -58,14 +57,32 @@
                                 %>
                             </div>
                         </div>
+                    </div>--%>
+
+                     <div class="box-container-1" style="width: 100%">
+                        <div class="outer" style="width: inherit">
+                            <div class="table-container-a" style="width: inherit">
+                                <%
+                                    out.print("<br/>");
+                                    out.print("<ol class=\"list-options\" style=\"width: inherit; text-align: center\">");
+                                    for (SpProfile profile : SpProfilesTasks.spProfiles) {
+
+                                        out.print("<li><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_name() + "</a></li>");
+                                    }
+                                    out.print("</ol>");
+                                %>
+                            </div>
+                        </div>
                     </div>
+
                     <%-- </div>--%>
                 </div>
                 <%-- </div>--%>
             </div>
         </div>
     </div>
-</div>
+<%--</div>--%>
+</section>
 
 <%@include file="chatBot.jsp" %>
 
