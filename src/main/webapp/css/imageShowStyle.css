@@ -1,0 +1,218 @@
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #57B3FF;
+}
+*/
+
+.image-container{
+    position: relative;
+    width: 600px;
+    height: 450px;
+    background: cornsilk;
+    border: 15px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-wrapper{
+    position: relative;
+    display: flex;
+    width: 300%;
+    height: 100%;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.image-card
+{
+    position: relative;
+    height: 450px;
+    width: 600px;
+}
+
+.image-box
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.image-box img
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.image-info-panel
+{
+    position: absolute;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    bottom: -100%;
+    transition: 0.1s 0.2s ease;
+}
+.image-card:hover .image-info-panel{
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.h2-image{
+    display: inline-block;
+    position: relative;
+    font-size: 50px;
+    text-transform: capitalize;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.7s 0.3s ease;
+}
+
+.h2-image::after
+{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 60%;
+    background: #57B3FF;
+    bottom: 0;
+    left: 50%;
+}
+
+.h5-image{
+    display: inline-block;
+    width: 280px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+    text-align: right;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.7s .09s ease;
+}
+
+.p-image{
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    margin: 8px 0;
+    color: #d8d8d8;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.7s 0.2s ease;
+}
+
+.image-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.a-image{
+    color: #000;
+    background: #fff;
+    padding: 2px 8px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.7s 0.5s ease;
+    border-radius:20px;
+}
+.image-icons{
+    display: flex;
+    margin-right: 40px;
+}
+
+.image-icons i{
+    font-size: 25px;
+    margin: auto 5px;
+    cursor: pointer;
+}
+
+.image-icons i:nth-child(1){
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.7s 0.8s ease;
+}
+.image-icons i:nth-child(2){
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.7s 0.9s ease;
+}
+.image-icons i:nth-child(3){
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.7s 1s ease;
+}
+
+.image-card:hover .image-info-panel .h2-image,
+.image-card:hover .image-info-panel .h5-image,
+.image-card:hover .image-info-panel .p-image,
+.image-card:hover .image-info-panel .a-image,
+.image-card:hover .image-info-panel  i{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-input{
+    display: none;
+    -webkit-appearance: none;
+    visibility: hidden;
+}
+
+.btnbar{
+    display: flex;
+    position: absolute;
+    height: 3px;
+    bottom: 5%;
+}
+
+.btnbar .navkeys{
+    height: 15px;
+    width: 15px;
+    background: #57B3FF;
+    margin: auto 5px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#btn1:checked ~ .image-container .btnbar .key1,
+#btn2:checked ~ .image-container .btnbar .key2,
+#btn3:checked ~ .image-container .btnbar .key3{
+    width: 60px;
+}
+
+#btn2:checked ~ .image-container .image-wrapper{
+    transform: translateX(calc(30px - 600px));
+}
+
+
+#btn3:checked ~ .image-container .image-wrapper{
+
+    transform: translateX(calc(60px - 1200px));
+}
