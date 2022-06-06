@@ -16,11 +16,9 @@
           <input type="checkbox" id="show-features">
           <label for="show-features">Специальности</label>
           <ul>
-            <%--<li><a href="specialitiesTable.html">Таблица специальностей</a></li>--%>
             <li><a href="show-study-areas">Направления подготовки</a></li>
             <li><a href="show-specialities">Специальности</a></li>
               <li><a href="show-profiles">Профили</a></li>
-             <%-- <li><a href="show-specialities">Специальности 2</a></li>--%>
           </ul>
         </li>
      <%--   <li>
@@ -43,9 +41,9 @@
           </ul>
         </li>--%>
         <%--  <li><a href="Chat.jsp">Обратная связь/Мессенджер</a></li>     --%>
-        <li><a href="${pageContext.request.contextPath}/start">Выйти</a></li>
+        <li><a href="${pageContext.request.contextPath}/start" id="exit">Выйти</a></li>
         <%
-          if(!loggedUser.getName().isEmpty())
+          if(/*!loggedUser.getName().isEmpty() && */loggedUser != null)
           {
             out.print("<li> <a href=\"UserProfile.jsp\" class=\"desktop-link\">"+ loggedUser.getName() + "</a></li>");
           }

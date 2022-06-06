@@ -30,6 +30,9 @@
     <form class="forms" action="user_login_success" method="get">
         <input type="submit" value="Логин" />
     </form>
+    <form class="forms" action="Main.jsp">
+        <input type="submit" value="Я не хочу регистрироваться" />
+    </form>
 </div>
 
 </body>

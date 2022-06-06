@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>New Main</title>
+    <title>Main</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -137,7 +137,7 @@
                                                         дальнейшей профессиональной деятельности
                                                         выпускника.</p>
                                                     <div class="image-details">
-                                                        <a class="a-image" href="show-specialities">Узнать больше</a>
+                                                        <a class="a-image" href="show-profiles">Узнать больше</a>
                                                     </div>
                                                 </div>
                                             </div>

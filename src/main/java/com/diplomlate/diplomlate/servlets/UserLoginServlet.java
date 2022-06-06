@@ -21,38 +21,50 @@ public class UserLoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String username = request.getParameter("usernameLog");
+        String password = request.getParameter("passwordLog");
 
         User user = new User();
         Login dao = new Login();
 
         user.setName(username);
         user.setPassword(password);
+        System.out.println(user.getName() + " " + user.getPassword());
 
         if(!dao.validateUser(user) || username.isEmpty() || password.isEmpty())
         {
             response.setContentType("text/html; charset=utf-8");
             PrintWriter out = response.getWriter();
-            out.println("Неверно введены данные!");
+            /*out.println("Неверно введены данные!");*/
+            out.println("<div style=\"position: center\">" +
+                      "  <span style=\"color: red; font-size: 18px\" id=\"announce\">Неверно введены данные!</span>"
+            + "</div>");
 
             RequestDispatcher req = request.getRequestDispatcher("Login.jsp");
             req.include(request, response);
+            System.out.println("nooooooo");
 
         }
         else
         {
-            response.setContentType("text/html; charset=utf-8");
+            System.out.println("Here");
+
+            /*response.setContentType("text/html; charset=utf-8");
             PrintWriter out = response.getWriter();
-            out.println("");
+            out.println("");*/
 
             dao.setLoggedUser(user);
+
+            System.out.println(loggedUser.getName() + " " + loggedUser.getPassword() + "Login");
 
             request.setAttribute("usernameLogin", username);
             request.setAttribute("passwordLogin", password);
 
             RequestDispatcher req = request.getRequestDispatcher("Main.jsp");
             req.forward(request, response);
+
+           /* StartServlet start = new StartServlet();
+            start.doPost(request, response);*/
         }
     }
 

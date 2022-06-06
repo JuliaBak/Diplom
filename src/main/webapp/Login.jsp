@@ -40,14 +40,14 @@
 
             <div>
                 <div class="data-input-user">
-                    <form <%--action="user_login_success"--%> method="post" class="forms-user">
+                    <form action="user_login_success" method="post" class="forms-user" id="myform">
                         <div>
-                            <label class="labels-user" for="username">Имя</label>
-                            <input type="text" class="data_input" name="username" id="username"/>
+                            <label class="labels-user" for="usernameLog">Имя</label>
+                            <input type="text" class="data_input" name="usernameLog" id="usernameLog"/>
                         </div>
                         <div>
-                            <label class="labels-user" for="password">Пароль</label>
-                            <input type="password" class="data_input" name="password" id="password"/>
+                            <label class="labels-user" for="passwordLog">Пароль</label>
+                            <input type="password" class="data_input" name="passwordLog" id="passwordLog"/>
                         </div>
                         <input type="submit" id="loginButton" value="Войти"/>
                     </form>
@@ -57,15 +57,17 @@
     </div>
 </section>
 
-<script>
+
+
+<%--<script>
     $(document).ready(function () {
-        $('#loginButton').onclick(function () {
-            var username = $('#username').val();
-            var password = $('#password').val();
+        $('#myform').submit(function () {
+            var usernameLog = $('#usernameLog').val();
+            var passwordLog = $('#passwordLog').val();
             $.ajax(
                 {
                     type: 'POST',
-                    data: {username: username, password: password},
+                    data: {usernameLog: usernameLog, passwordLog: passwordLog},
                     url: 'user_login_success',
                     success: function (result) {
                         $('#announce').html(result);
@@ -74,7 +76,28 @@
             )
         });
     });
+</script>--%>
+
+<%--
+<script type="text/javascript">
+    var frm = $('#myform');
+
+    frm.submit(function (/*e*/) {
+
+        var usernameLog = $('#usernameLog').val();
+        var passwordLog = $('#passwordLog').val();
+        $.ajax({
+            type: 'POST',
+            url: 'user_login_success',
+            data: {usernameLog: usernameLog, passwordLog: passwordLog},
+           /* data: frm.serialize(),*/
+            success: function (data) {
+                $('#announce').html(data);
+            }
+        });
+    });
 </script>
+--%>
 
 <%--<script>
     $(document).ready(function () {
