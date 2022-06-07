@@ -1,4 +1,5 @@
 <%@ page import="static com.diplomlate.diplomlate.entities.User.loggedUser" %>
+<%@ page import="java.util.Objects" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--Для встройки данного сегмента необходимо, что в "голове" был указан style.css--%>
 <div class="wrapper">
@@ -43,7 +44,7 @@
         <%--  <li><a href="Chat.jsp">Обратная связь/Мессенджер</a></li>     --%>
         <li><a href="${pageContext.request.contextPath}/start" id="exit">Выйти</a></li>
         <%
-          if(/*!loggedUser.getName().isEmpty() && */loggedUser != null)
+          if(!Objects.equals(loggedUser.getName(), null)/* && loggedUser != null*/)
           {
             out.print("<li> <a href=\"UserProfile.jsp\" class=\"desktop-link\">"+ loggedUser.getName() + "</a></li>");
           }

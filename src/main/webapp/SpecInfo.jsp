@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/imageShowStyle.css">
+
     <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -48,6 +50,40 @@
                         </div>
                     </div>
 
+<%--
+                    <%
+                        for (SpProfile spProfile : SpProfilesTasks.searchedAllSpProfiles) {
+
+                            out.print("<div class=\"box-container-1\">");
+                            out.print("<div class=\"outer\">");
+
+                            out.print("<div class=\"image-container\">");
+                            out.print("<div class=\"image-wrapper\" style=\"width: 100%\">");
+
+                            out.print("<div class=\"image-card\">");
+
+                            out.print("<div class=\"image-box\">");
+                            out.print("<img src=\"images/personWorking.jpg\">");
+                            out.print("</div>");
+
+                            out.print("<div class=\"image-info-panel\">");
+                            out.print("<h2 class=\"h2-image\">" + spProfile.getSp_prof_name() + "</h2>");
+                          /*  out.print("<p class=\"p-image\">" + spProfile.getSp_prof_description() + "</p>");*/
+
+                            out.print(" <div class=\"image-details\">");
+                            out.print("<a class=\"a-image\" href=\"sp_prof_info" + "?" + spProfile.getSp_prof_id() + "\">Узнать больше</a>");
+                            out.print("</div>");
+
+                            out.print("</div>");
+
+                            out.print("</div>");
+                            out.print("</div>");
+                            out.print("</div>");
+
+                            out.print("</div>");
+                            out.print("</div>");
+                        }
+                    %>--%>
 
                     <div id="spec-info-profiles">
                         <div class="box-container-1">

@@ -117,11 +117,6 @@
                                                         направлению подготовки</p>
                                                     <div class="image-details">
                                                         <a class="a-image" href="show-specialities">Узнать больше</a>
-                                                        <div class="image-icons">
-                                                            <i class="fa fa-github"></i>
-                                                            <i class="fa fa-twitter"></i>
-                                                            <i class="fa fa-youtube"></i>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

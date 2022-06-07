@@ -62,7 +62,7 @@ public class Login {
                     logUser.setEmail(email);
                 }
                 else {
-                    logUser.setEmail("Нет");
+                    logUser.setEmail(null);
                 }
                 i++;
                 loggedUser = logUser;

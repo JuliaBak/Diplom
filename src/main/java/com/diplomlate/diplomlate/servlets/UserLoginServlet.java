@@ -29,25 +29,22 @@ public class UserLoginServlet extends HttpServlet {
 
         user.setName(username);
         user.setPassword(password);
-        System.out.println(user.getName() + " " + user.getPassword());
 
         if(!dao.validateUser(user) || username.isEmpty() || password.isEmpty())
         {
             response.setContentType("text/html; charset=utf-8");
             PrintWriter out = response.getWriter();
             /*out.println("Неверно введены данные!");*/
-            out.println("<div style=\"position: center\">" +
+            out.println("<div style=\"position: absolute; text-align: center;  top: 48%; left: 40%;\">" +
                       "  <span style=\"color: red; font-size: 18px\" id=\"announce\">Неверно введены данные!</span>"
             + "</div>");
 
             RequestDispatcher req = request.getRequestDispatcher("Login.jsp");
             req.include(request, response);
-            System.out.println("nooooooo");
 
         }
         else
         {
-            System.out.println("Here");
 
             /*response.setContentType("text/html; charset=utf-8");
             PrintWriter out = response.getWriter();
@@ -55,7 +52,7 @@ public class UserLoginServlet extends HttpServlet {
 
             dao.setLoggedUser(user);
 
-            System.out.println(loggedUser.getName() + " " + loggedUser.getPassword() + "Login");
+            System.out.println(loggedUser.getName() + " " + loggedUser.getPassword() + " Login");
 
             request.setAttribute("usernameLogin", username);
             request.setAttribute("passwordLogin", password);

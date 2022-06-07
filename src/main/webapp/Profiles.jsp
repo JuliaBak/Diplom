@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <link rel="stylesheet" href="css/imageShowStyle.css">
+
     <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/tablesMain.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,12 +35,49 @@
                     <div class="box-container-1">
                         <div class="outer">
                             <div class="main-text-a">
-                                <h2>Профили:</h2>
+                                <h2>Профили</h2>
                             </div>
                         </div>
                     </div>
-                    <br/>
-                    <br/>
+
+
+                    <div class="box-container-1" >
+                        <div class="box-wrap-1" style="flex-direction: row; font-size: 20px;word-break: break-word;">
+                            <%--<div class="outer" style="justify-content: space-around; align-content: space-around; ">--%>
+                            <%
+                                for (SpProfile profile : SpProfilesTasks.spProfiles) {
+
+                                    /* out.print("<div class=\"image-container\" style=\"margin: 10px; width:300px; background-image: url(images/computers.jpg); background-repeat: no-repeat;background-size: cover;\">");
+                                     */
+                                    out.print("<div class=\"image-container-3\">");
+                                    out.print("<div class=\"image-wrapper\" style=\"width: 100%\">");
+
+                                    out.print("<div class=\"image-card\" style=\" width:300px;\">");
+                                    out.print(" <h2 style=\"top: 25%; color: white;margin: 20px;text-align: center;position: relative;\"><a style=\"color: white;\" href=\"sp_prof_info" +
+                                            "?" + profile.getSp_prof_id() + "\">"
+                                            + profile.getSp_prof_name() + "</a></h2>");
+
+                                    out.print("</div>");
+
+                                    out.print("</div>");
+                                    out.print("</div>");
+
+
+                                }
+                            %>
+                            <%--</div>--%>
+                        </div>
+                    </div>
+
+
+                    <div class="box-container-1">
+                        <div class="outer">
+                            <div class="main-text-a">
+                                <h2>Список профилей</h2>
+                            </div>
+                        </div>
+                    </div>
+
                    <%-- <div class="box-container-1">
                         <div class="outer">
                             <div class="table-container-a">
@@ -67,7 +106,7 @@
                                     out.print("<ol class=\"list-options\" style=\"width: inherit; text-align: center\">");
                                     for (SpProfile profile : SpProfilesTasks.spProfiles) {
 
-                                        out.print("<li><a href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_name() + "</a></li>");
+                                        out.print("<li><a style=\"color: black;\" href=\"sp_prof_info" + "?" + profile.getSp_prof_id() + "\">" + profile.getSp_prof_name() + "</a></li>");
                                     }
                                     out.print("</ol>");
                                 %>
