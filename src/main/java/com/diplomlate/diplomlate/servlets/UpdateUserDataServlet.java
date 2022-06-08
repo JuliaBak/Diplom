@@ -56,15 +56,18 @@ public class UpdateUserDataServlet extends HttpServlet {
             updateUser.setName(newUsername);
             updateUser.setPassword(newPass);
             updateUser.setEmail(newEmail);
+            updateUser.setUser_id(loggedUser.getUser_id());
 
             Login dao = new Login();
-            String result = dao.updateUser(updateUser, loggedUser.getUser_id());
+            String result = dao.updateObject(updateUser);
 
             if (result.equals("Success")) {
                 response.setContentType("text/html; charset=utf-8");
                 PrintWriter out = response.getWriter();
               /*  out.println("<span style=\"color: red; font-size: 18px\" id=\"changeResult\">Пользователь обновлен</span>");*/
                 out.println("Пользователь обновлен");
+
+
             } else {
                 response.setContentType("text/html");
                 PrintWriter out = response.getWriter();

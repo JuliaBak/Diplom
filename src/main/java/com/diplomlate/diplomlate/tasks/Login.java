@@ -1,18 +1,24 @@
 package com.diplomlate.diplomlate.tasks;
 
 import com.diplomlate.diplomlate.DBWork.DBConnection;
-import com.diplomlate.diplomlate.entities.Speciality;
 import com.diplomlate.diplomlate.entities.User;
+import com.diplomlate.diplomlate.model.Dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.diplomlate.diplomlate.entities.User.loggedUser;
 
-public class Login {
+public class Login implements Dao {
+
+    List<User> users;
     String sql="SELECT * FROM users WHERE user_name=? AND user_password=?";
+
+    String sqlAll ="SELECT * FROM users;";
     String updateSql = "UPDATE users SET user_name=?, user_email=?, user_password=? WHERE user_id=?";
 
     public boolean validateUser(User user)
@@ -58,7 +64,7 @@ public class Login {
                 logUser.setUser_id(rs.getInt("user_id"));
 
                 String email = rs.getString("user_email");
-                if(!email.isEmpty() || email == null) {
+                if(!email.isEmpty() || email != null) {
                     logUser.setEmail(email);
                 }
                 else {
@@ -81,7 +87,7 @@ public class Login {
 
     }
 
-    public String updateUser(User user, int logged_user_id)
+    public String updateUser(User user)
     {
         Connection con = DBConnection.getConnection();
 
@@ -92,14 +98,13 @@ public class Login {
             ps.setString(1, user.getName());
             ps.setString(2, user.getEmail());
             ps.setString(3, user.getPassword());
-            ps.setInt(4, logged_user_id);
+            ps.setInt(4, user.getUser_id());
 
             int rs = ps.executeUpdate();
 
             if (rs !=0 ) {
 
                 loggedUser = user;
-                loggedUser.setUser_id(logged_user_id);
                 i++;
             }
 
@@ -112,6 +117,62 @@ public class Login {
         } else {
             return "Error!!";
         }
+
+    }
+
+    @Override
+    public List<User> getAllObjects() {
+        users = new ArrayList<>();
+
+        Connection con = DBConnection.getConnection();
+        int i = 0;
+        try {
+            PreparedStatement ps= con.prepareStatement(sqlAll);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                User user = new User();
+                user.setName(rs.getString("user_name"));
+                user.setPassword(rs.getString("user_password"));
+                user.setUser_id(rs.getInt("user_id"));
+
+                String email = rs.getString("user_email");
+                if( email != null) {
+                    if(!email.isEmpty()){
+                    user.setEmail(email);
+                    }
+                }
+                else {
+                    user.setEmail(null);
+                }
+                users.add(user);
+                i++;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if ((i != 0)) {
+            return users;
+        } else {
+            return null;
+        }
+
+    }
+
+    @Override
+    public Object getObjectById(int id) {
+        return null;
+    }
+
+    @Override
+    public String updateObject(Object user) {
+        return updateUser((User) user);
+    }
+
+    @Override
+    public void deleteObject(Object object) {
 
     }
 }

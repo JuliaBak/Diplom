@@ -8,6 +8,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import static com.diplomlate.diplomlate.entities.User.loggedUser;
 
@@ -35,7 +36,7 @@ public class UserLoginServlet extends HttpServlet {
             response.setContentType("text/html; charset=utf-8");
             PrintWriter out = response.getWriter();
             /*out.println("Неверно введены данные!");*/
-            out.println("<div style=\"position: absolute; text-align: center;  top: 48%; left: 40%;\">" +
+            out.println("<div style=\"position: absolute; text-align: center;  top: 46%; left: 45%;\">" +
                       "  <span style=\"color: red; font-size: 18px\" id=\"announce\">Неверно введены данные!</span>"
             + "</div>");
 
