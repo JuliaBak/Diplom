@@ -59,6 +59,21 @@
                         </div>
                     </div>
 
+                    <div id="promo-photo">
+                        <div class="box-container-1"
+                             style=" padding: 30px; background-repeat: no-repeat;background-size: cover; background-position: center;background-image: url(images/blackPaint.png);/*filter: drop-shadow(2px 4px 6px black);*/border-radius: 50px;margin: 20px;">
+                            <div class="outer">
+                                 <iframe width="660" height="415" src="https://www.youtube.com/embed/d_47ez-wxp0?start=19"
+                                         title="YouTube video player" frameborder="0"
+                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                         allowfullscreen
+                                         style="border: solid 2px;background: white;border-radius: 50px;"></iframe>
+                              <%--  <iframe width="660" height="415"
+                                        src="https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                        style="border: solid 2px;background: white; border-radius: 50px;"></iframe>--%>
+                            </div>
+                        </div>
+                    </div>
 
                     <div id="disciplines">
 

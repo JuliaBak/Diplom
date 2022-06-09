@@ -27,7 +27,45 @@
             <div class="box-container-2" style="width: 100%">
                 <div class="box-wrap-1">
 
-                  <%--  <div class="box-container-1">
+                    <%--  <div class="box-container-1">
+                          <div class="outer">
+                              <div class="main-text-a">
+                                  <h2>Направления подготовки</h2>
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="box-container-1">
+                          <div class="box-wrap-1"  style="flex-direction: row; font-size: 20px; word-break: break-word; justify-content: space-around">
+                              &lt;%&ndash;<div class="outer" style="justify-content: space-around; align-content: space-around; ">&ndash;%&gt;
+                              <%
+                                  for (StudyArea studyArea : StudyAreasTasks.study_areas) {
+
+                                      /* out.print("<div class=\"image-container\" style=\"margin: 10px; width:300px; background-image: url(images/computers.jpg); background-repeat: no-repeat;background-size: cover;\">");
+                                       */
+                                      out.print("<div class=\"image-container-3\">");
+                                      out.print("<div class=\"image-wrapper\" style=\"width: 100%; justify-content: space-around;\">");
+
+                                      out.print("<div class=\"image-card-2\" style=\" width:300px;\">");
+                                      out.print(" <h2 style=\"top: 25%; color: white; margin: 20px; text-align: center; position: relative; font-size: 20px\">" +
+                                              "<a style=\" color:white; font-size: 37px\" href=\"study-area-info" +
+                                              "?" + studyArea.getSa_id() + "\">"
+                                              + studyArea.getSa_name() + "</a></h2>");
+
+                                      out.print("</div>");
+
+                                      out.print("</div>");
+                                      out.print("</div>");
+
+
+                                  }
+                              %>
+                              &lt;%&ndash;</div>&ndash;%&gt;
+                          </div>
+                      </div>--%>
+
+                    <div class="box-container-1">
                         <div class="outer">
                             <div class="main-text-a">
                                 <h2>Направления подготовки</h2>
@@ -35,41 +73,14 @@
                         </div>
                     </div>
 
-
-                    <div class="box-container-1">
-                        <div class="box-wrap-1"  style="flex-direction: row; font-size: 20px; word-break: break-word; justify-content: space-around">
-                            &lt;%&ndash;<div class="outer" style="justify-content: space-around; align-content: space-around; ">&ndash;%&gt;
-                            <%
-                                for (StudyArea studyArea : StudyAreasTasks.study_areas) {
-
-                                    /* out.print("<div class=\"image-container\" style=\"margin: 10px; width:300px; background-image: url(images/computers.jpg); background-repeat: no-repeat;background-size: cover;\">");
-                                     */
-                                    out.print("<div class=\"image-container-3\">");
-                                    out.print("<div class=\"image-wrapper\" style=\"width: 100%; justify-content: space-around;\">");
-
-                                    out.print("<div class=\"image-card-2\" style=\" width:300px;\">");
-                                    out.print(" <h2 style=\"top: 25%; color: white; margin: 20px; text-align: center; position: relative; font-size: 20px\">" +
-                                            "<a style=\" color:white; font-size: 37px\" href=\"study-area-info" +
-                                            "?" + studyArea.getSa_id() + "\">"
-                                            + studyArea.getSa_name() + "</a></h2>");
-
-                                    out.print("</div>");
-
-                                    out.print("</div>");
-                                    out.print("</div>");
-
-
-                                }
-                            %>
-                            &lt;%&ndash;</div>&ndash;%&gt;
-                        </div>
-                    </div>--%>
-
-                    <div class="box-container-1">
+                    <div class="box-container-1" style="padding: 30px; background-image: url(images/img.png);
+    background-repeat: no-repeat; background-size: cover; background-position: inherit;">
                         <div class="outer">
-                            <div class="main-text-a">
-                                <h2>Направления подготовки</h2>
-                            </div>
+                            <iframe width="660" height="415" src="https://www.youtube.com/embed/d_47ez-wxp0?start=19"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                    style="border: solid 2px;background: white;border-radius: 50px;"></iframe>
                         </div>
                     </div>
 

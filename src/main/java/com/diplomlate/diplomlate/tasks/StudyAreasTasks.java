@@ -70,6 +70,7 @@ public class StudyAreasTasks {
                 speciality.setSpec_description(rs.getString("spec_description"));
                 speciality.setSpec_number(rs.getString("spec_number"));
                 speciality.setSpec_sa_id(rs.getInt("spec_sa_id"));
+                speciality.setPromo_video(rs.getString("spec_sa_promo_video"));
 
                 sa_specialities.add(speciality);
                 i++;

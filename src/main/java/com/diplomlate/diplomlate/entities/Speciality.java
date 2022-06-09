@@ -5,6 +5,8 @@ public class Speciality {
     private String spec_number;
     private String spec_description;
 
+    private String promo_video;
+
     private int spec_sa_id;
 
     private int spec_id;
@@ -69,6 +71,16 @@ public class Speciality {
     public  void setSpec_id(int spec_id)
     {
         this.spec_id = spec_id;
+    }
+
+    public String getPromo_video()
+    {
+        return promo_video;
+    }
+
+    public void setPromo_video(String promo_video)
+    {
+        this.promo_video = promo_video;
     }
 
 }

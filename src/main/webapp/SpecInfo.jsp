@@ -30,7 +30,7 @@
     <div class="box-container-1">
         <div class="box-container-1">
             <div class="box-container-2" style="width: 100%">
-                <div class="box-wrap-1">
+                <div class="box-wrap-1" style="justify-content: center">
 
                     <div class="box-container-1">
                         <div class="outer">
@@ -50,6 +50,19 @@
                         </div>
                     </div>
 
+                    <div id="prom-video">
+                        <div class="box-container-1" style=" padding: 30px; background-repeat: no-repeat;background-size: inherit; background-position: center;background-image: url(images/img.png);filter: drop-shadow(2px 4px 6px black);border-radius: 50px;">
+                            <div class="outer">
+                                <%
+                                    if(SpecialitiesTasks.searchedSpec.getPromo_video() != null) {
+                                        out.print("<iframe width=\"660\" height=\"414\" src=\"" + SpecialitiesTasks.searchedSpec.getPromo_video() + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
+                                                " encrypted-media; gyroscope; picture-in-picture\" allowfullscreen" +
+                                                " style=\"border: solid 2px;background: white;border-radius: 50px;\"></iframe>");
+                                    }
+                                %>
+                            </div>
+                        </div>
+                    </div>
 <%--
                     <%
                         for (SpProfile spProfile : SpProfilesTasks.searchedAllSpProfiles) {
