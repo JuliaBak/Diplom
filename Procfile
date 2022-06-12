@@ -1,1 +1,1 @@
-web:deploy-war target/DiplomLate-1.0-SNAPSHOT.war
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT --expand-war target/*.war
