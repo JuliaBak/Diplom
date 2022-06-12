@@ -1,1 +1,1 @@
-web:deploy target/DiplomLate-1.0-SNAPSHOT.war
+web:deploy-war target/DiplomLate-1.0-SNAPSHOT.war
