@@ -64,6 +64,12 @@
                     <appName>DiplomLate</appName>
                 </configuration>
             </plugin>-->
+
+            <!--<plugin>
+             <groupId>com.heroku</groupId>
+                <artifactId>webapp-runner-memcached</artifactId>
+                <version>9.0.52.1</version>
+            </plugin>-->
         </plugins>
     </build>
 </project>
