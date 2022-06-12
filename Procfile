@@ -1,1 +1,1 @@
-heroku:deploy-war target/*.war
+web: deploy target/*.war --app diplom-bak
