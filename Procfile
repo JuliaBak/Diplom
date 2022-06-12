@@ -1,0 +1,1 @@
+web: deploy war D:\Diplom\UltimateDiplom\DiplomLate\target\DiplomLate-1.0-SNAPSHOT.war --app diplom-app_bakai
