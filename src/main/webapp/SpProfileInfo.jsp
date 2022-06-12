@@ -61,7 +61,7 @@
 
                     <div id="promo-photo">
                         <div class="box-container-1"
-                             style=" padding: 30px; background-repeat: no-repeat;background-size: cover; background-position: center;background-image: url(images/blackPaint.png);/*filter: drop-shadow(2px 4px 6px black);*/border-radius: 50px;margin: 20px;">
+                             style=" padding: 30px; background-repeat: no-repeat;background-size: cover; background-position: center;/*background-image: url(images/blackPaint.png)*/;/*filter: drop-shadow(2px 4px 6px black);*/border-radius: 50px;margin: 20px;">
                             <div class="outer">
                                  <iframe width="660" height="415" src="https://www.youtube.com/embed/d_47ez-wxp0?start=19"
                                          title="YouTube video player" frameborder="0"
