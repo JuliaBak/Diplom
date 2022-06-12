@@ -1,1 +1,1 @@
-web: deploy target/*.war --app diplom-bak
+web: deploy target/DiplomLate-1.0-SNAPSHOT.war --app diplom-bak
